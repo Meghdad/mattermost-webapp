@@ -6,6 +6,8 @@ const de = require('./de.json');
 
 const es = require('./es.json');
 
+const fa = require('./fa.json');
+
 const fr = require('./fr.json');
 
 const it = require('./it.json');
@@ -56,82 +58,88 @@ const languages = {
         order: 2,
         url: es,
     },
+    fa: {
+        value: 'fa',
+        name: 'Persian',
+        order: 3,
+        url: fa,
+    },
     fr: {
         value: 'fr',
         name: 'Français',
-        order: 3,
+        order: 4,
         url: fr,
     },
     it: {
         value: 'it',
         name: 'Italiano',
-        order: 4,
+        order: 5,
         url: it,
     },
     ja: {
         value: 'ja',
         name: '日本語',
-        order: 15,
+        order: 16,
         url: ja,
     },
     ko: {
         value: 'ko',
         name: '한국어 (Alpha)',
-        order: 12,
+        order: 13,
         url: ko,
     },
     nl: {
         value: 'nl',
         name: 'Nederlands (Alpha)',
-        order: 5,
+        order: 6,
         url: nl,
     },
     pl: {
         value: 'pl',
         name: 'Polski',
-        order: 6,
+        order: 7,
         url: pl,
     },
     'pt-BR': {
         value: 'pt-BR',
         name: 'Português (Brasil)',
-        order: 7,
+        order: 8,
         url: ptBR,
     },
     ro: {
         value: 'ro',
         name: 'Română',
-        order: 8,
+        order: 9,
         url: ro,
     },
     ru: {
         value: 'ru',
         name: 'Pусский (Alpha)',
-        order: 10,
+        order: 11,
         url: ru,
     },
     tr: {
         value: 'tr',
         name: 'Türkçe',
-        order: 9,
+        order: 10,
         url: tr,
     },
     uk: {
         value: 'uk',
         name: 'Yкраїнська (Alpha)',
-        order: 11,
+        order: 12,
         url: uk,
     },
     'zh-TW': {
         value: 'zh-TW',
         name: '中文 (繁體)',
-        order: 14,
+        order: 15,
         url: zhTW,
     },
     'zh-CN': {
         value: 'zh-CN',
         name: '中文 (简体)',
-        order: 13,
+        order: 14,
         url: zhCN,
     },
 };

@@ -1,0 +1,4975 @@
+@charset 'UTF-8';
+
+/*### components ###*/
+    //// admin-modal --> haven't right to left
+    //// admin-sidebar-header
+    //// alerts
+    //// announcement-bar
+    //// badge
+    //// buttons
+    //// color-input
+    //// day-picker
+    //// dropdown
+    //// edit-post-time-limit-button
+    //// edit-post-time-limit-modal
+    //// emojisprite
+    //// emoticons
+    //// files
+    //// groups
+    //// inputs
+    //// line-switch --> haven't right to left
+    //// links --> haven't right to left
+    //// mentions
+    //// modal
+    //// multi-select
+    //// oauth
+    //// permissions
+    //// popover
+    //// react-select --> haven't right to left
+    //// remove-image
+    //// save-button
+    //// scrollbar
+    //// search
+    //// select
+    //// sidebar-card
+    //// sidebar-header-dropdown-button
+    //// sidebar-header
+    //// spinner-button --> haven't right to left
+    //// status-icon
+    //// suggestion-list
+    //// system-notice
+    //// team-channel-settings
+    //// toggle
+    //// tooltip
+    //// tutorial
+    //// videos
+
+/*### layout ###*/
+    //// channel-icon
+    //// content
+    //// footer
+    //// forms
+    //// headers
+    //// markdown
+    //// navigation
+    //// post-right
+    //// post
+    //// sidebar-left
+    //// sidebar-menu
+    //// sidebar-right
+    //// team-button --> haven't right to left
+    //// team-sidebar
+    //// webhooks
+
+/*### responsive ###*/
+    //// desktop
+    //// mobile
+    //// tablet
+
+/*### routes ###*/
+    //// about-modal
+    //// access-history --> haven't right to left
+    //// activity-log
+    //// admin-console
+    //// backstage
+    //// compliance
+    //// docs
+    //// error-page
+    //// get-app
+    //// loading --> haven't right to left
+    //// print
+    //// settings
+    //// shortcuts-modal
+    //// signup
+    //// statistics
+
+/*### utils ###*/
+    //// modifiers
+
+/*### widgets ###*/
+    //// loading
+        //// loading-bars
+        //// loading-spinner
+
+body[dir='rtl'] {
+    direction: rtl;
+}
+
+[dir='rtl'] {
+    /*### components START ###*/
+        //// admin-sidebar-header START
+        .AdminSidebarHeader {
+            > div {
+                .header__info {
+                    padding: 3px 8px 0 15px;
+                }
+
+                .menu-icon {
+                    margin-right: inherit;
+                    margin-left: 10px;
+                }
+            }
+
+            .Menu {
+                margin-right: 16px;
+                margin-left: inherit;
+            }
+
+        }    
+        //// admin-sidebar-header END
+        
+        //// alerts START
+        .alert--confirm {
+            float: right;
+            margin: 1px 10px 0 0;
+        }
+
+        .alert .btn-close {
+            float: left;
+        }
+        //// alerts END
+
+        //// announcement-bar START
+        .announcement-bar {
+            a {
+                &.announcement-bar__close {
+                    right: inherit;
+                    left: 0;
+                }
+
+            }
+        }
+        //// announcement-bar END
+
+        //// badge START
+        .channel-view {
+            .team-sidebar {
+                .badge {
+                    right: inherit;
+                    left: -8px;
+                }
+            }
+        
+            .navbar-toggle {
+                .badge {
+                    right: 8px;
+                    left: inherit;
+                }
+            }
+        }
+        //// badge END
+
+        //// buttons START
+        button {
+            &.style--none {
+                &.btn--block {
+                    text-align: right;
+                }
+            }
+        }
+
+        .btn {
+            .fa {
+                margin-right: inherit;
+                margin-left: 3px;
+
+                &.margin-right {
+                    margin-right: inherit;
+                    margin-left: 6px;
+                }
+
+                &.margin-left {
+                    margin-right: 6px;
+                    margin-left: inherit;
+                }
+            }
+        }
+        //// buttons END
+        
+        //// color-input START
+        .color-popover {
+            right: inherit;
+            left: 0;
+        }
+        //// color-input END
+
+        //// day-picker START
+        .app__body {
+            .DayPicker {
+                .DayPicker-Caption {
+                    margin: 0 0 .7rem 0.5rem;
+                    padding: 0 0 .7rem 0.5rem;
+                }
+
+                .DayPicker-NavButton {
+                    right: inherit;
+                    left: .5rem;
+                }
+            }
+        }
+        //// day-picker END
+
+        //// dropdown START
+        .dropdown-menu__icons {
+            li {
+                .fa {
+                    margin-right: -5px;
+                    margin-left: inherit;
+                }
+            }
+        }
+        //// dropdown END
+
+        //// edit-post-time-limit-button START
+        .edit-post-time-limit-button {
+            i {
+                margin-right: inherit;
+                margin-left: 4px;
+            }
+        }
+        //// edit-post-time-limit-button END
+
+        //// edit-post-time-limit-modal START
+        .edit-post-time-limit-modal {
+            .edit-post-time-limit-modal__error {
+                text-align: right;
+            }
+        }
+        //// edit-post-time-limit-modal END
+
+        //// emojisprite START
+        .emojisprite-preview {
+            padding: 0 0 0 10px;
+        }
+        //// emojisprite END
+
+        //// emoticons START
+        .emoji-picker {
+            margin-right: inherit;
+            margin-left: 3px;
+            
+            .app__content & {
+                margin-right: inherit;
+                margin-left: 0;
+            }
+        }
+
+        .emoji-picker__header,
+        .modal-body .emoji-picker .emoji-picker__header {
+            padding: 13px 15px 13px 10px;
+        }
+
+        .emoji-picker__search-container {
+            .emoji-picker__search-icon {
+                padding-right: 9px;
+                padding-left: inherit;
+            }
+
+            .emoji-picker__search {
+                padding: 2px 27px 2px 0;
+            }
+        }
+
+        .emoji-picker__items {
+            padding: 0 0 8px 8px;
+
+            .emoji-picker-items__container {
+                .emoji-picker__item {
+                    margin: 0 0 1px 3px;
+
+                    > div {
+                        > img {
+                            right: -21px;
+                            left: inherit;
+                            
+                            &.emoji-shipit {
+                                right: -26px;
+                                left: inherit;
+                            }
+
+                            &.emoji-category--custom {
+                                right: auto;
+                                left: inherit;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .emoji-picker__preview {
+            padding: 7px 0 0 10px;
+            
+            .emoji-picker__preview-image-label-box {
+                margin-right: 4px;
+                margin-left: inherit;
+            }
+        }
+        //// emoticons END
+
+        //// files START
+        .file-preview__container {
+            margin: 1px 0 5px 0;
+        }
+
+        .file-preview {
+            margin-right: inherit;
+            margin-left: 10px;
+            
+            .spinner {
+                right: 50%;
+                left: inherit;
+                margin-right: -16px;
+                margin-left: inherit;
+            }
+        }
+
+        .file-preview__remove {
+            right: inherit;
+            left: 0;
+            
+            i {
+                right: inherit;
+                left: auto;
+            }
+        }
+
+        .pdf-max-pages {
+            right: 0;
+            left: inherit;
+        }
+
+        .file-view--single {
+            .file__image {
+                .image-name {
+                    padding-right: 3px;
+                    padding-left: inherit;
+
+                    div {
+                        margin-right: 5px;
+                        margin-left: inherit;
+                    }
+                }
+
+                .image-loaded {
+                    >.file-preview__button {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        .post-image__column {
+            margin: 5px 0 5px 10px;
+
+            &.file-preview {
+                margin: 0 0 0 10px;
+            }
+        }
+
+        .post-image {
+            .spinner {
+                .file__loading {
+                    right: 50%;
+                    left: inherit;
+                    margin-right: -16px;
+                    margin-left: inherit;
+                }
+            }
+        }
+
+        .post-image__details {
+            border-right: 1px solid $light-gray;
+            border-left: inherit;
+            
+            .post-image__detail_wrapper {
+                padding: 0 15px 0 45px;
+                
+                .post--compact & {
+                    padding-right: 8px;
+                    padding-left: inherit;
+                }
+
+                .post-image__detail {
+                    .post-image__size {
+                        margin-right: 4px;
+                        margin-left: inherit;
+                    }
+                }
+            }
+
+            .post-image__download {
+                right: inherit;
+                left: 0;
+            }
+
+            .post-image__progressBar {
+                margin-right: -15px;
+                margin-left: inherit;
+            }
+        }
+
+        .file-details__container {
+            .file-details {
+                text-align: right;
+            }
+
+            .file-details__preview {
+                border-right: inherit;
+                border-left: 1px solid $light-gray;
+            }
+        }
+
+        .file-playback__controls {
+            right: inherit;
+            left: 5px;
+        }
+        //// files END
+
+        //// groups START
+        .groups-list {
+            .groups-list--global-actions {
+                .group-list-search {
+                    input {
+                        margin-right: 25px;
+                        margin-left: 15px;
+                    }
+        
+                    .group-filter-action {
+                        padding: 8px 0px 0px 10px;
+                    }
+                }
+
+                .group-search-filters {
+                    .search-groups-btn {
+                        float: left;
+                        right: inherit;
+                        left: 20px;
+                    }
+        
+                    .cancel-filters {
+                        float: left;
+                    }
+        
+                    .filter-check {
+                        margin-right: inherit;
+                        margin-left: 7px;
+                    }
+                }
+            }
+        
+            .groups-list--header {
+                .group-name {
+                    margin-right: 16px;
+                    margin-left: inherit;
+                }
+            }
+        
+            .group-check {
+                margin: 5px 14px 4px 5px;
+            }
+        
+            .group-description {
+                i {
+                    margin-right: inherit;
+                    margin-left: 5px;
+                }
+            }
+        
+            .group-actions {
+                text-align: left;
+                padding-right: inherit;
+                padding-left: 20px;
+            }
+        
+            .group-row {
+                &:hover {
+                    border-right: 2px solid $primary-color;
+                    border-left: inherit;
+                }
+            }
+        }
+        
+        .group-users {
+            .group-users--body {
+                .group-users-row {
+                    .user-data {
+                        margin-right: 10px;
+                        margin-left: inherit;
+                    }
+        
+                    .email-label {
+                        margin-right: inherit;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+        
+        .group-teams-and-channels {
+        .group-teams-and-channels--body {
+                .group-teams-and-channels-row {
+                    .arrow-icon {
+                        margin-right: 10px;
+                        margin-left: inherit;
+                    }
+                }
+            }
+        }
+        
+        .group-profile-add-menu {
+            margin-right: 10px;
+            margin-left: inherit;
+            
+            .fa-caret-down {
+                margin-right: 5px;
+                margin-left: inherit;
+            }
+        }
+        
+        .group-users--header-padded {
+            padding-right: 24px;
+            padding-left: inherit;
+        }    
+        //// groups END
+
+        //// inputs START
+        .help-text {
+            margin: 10px 0 0 0;
+            
+            ul,
+            ol {
+                padding-right: 23px;
+                padding-left: inherit;
+            }
+            
+            .help-link {
+                margin-right: inherit;
+                margin-left: 5px;
+            }
+        }
+        //// inputs END
+
+        //// mentions START
+        .mentions__name {
+            .Avatar {
+                margin-right: inherit;
+                margin-left: 7px;
+            }
+
+            .admin-setting-user--align {
+                margin-right: inherit;
+                margin-left: 5px;
+            }
+
+            .icon {
+                margin: 0 0 0 7px;
+            }
+        }
+
+        .mention__image {
+            margin-right: inherit;
+            margin-left: 7px;
+        }
+
+        .mention__fullname {
+            margin: 0 4px 0 0;
+        }
+
+        .mention__purpose {
+            margin-right: 5px;
+            margin-left: inherit;
+        }
+        //// mentions END
+
+        //// modal START
+        .row--invite {
+            .col-sm-6 {
+                &:first-child {
+                    padding-right: inherit;
+                    padding-left: 0;
+                }
+            }
+        }
+
+        .modal__error {
+            float: right;
+        }
+
+        .modal {
+            .modal-footer {
+                .error-text {
+                    float: right;
+                    text-align: right;
+                }
+            }
+
+            .custom-textarea {
+                padding: 12px 15px 12px 30px;
+            }
+
+            .info__value {
+                padding-right: 10px;
+                padding-left: inherit;
+            }
+
+            .remove__member {
+                float: left;
+            }
+
+            .modal-dialog {
+                &.modal--overflow-visible {
+                    .modal-body {
+                        .dropdown-menu {
+                            right: auto;
+                            left: 20px;
+                        }
+                    }
+                }
+            }
+
+            .modal-next-bar {
+                right: inherit;
+                left: 0;
+            }
+
+            .modal-header {
+                padding: 14px inherit 11px 15px;
+
+                .modal-title {
+                    float: right;
+                }
+
+                .close {
+                    right: inherit;
+                    left: 10px;
+                }
+
+                .btn {
+                    &.btn-primary {
+                        float: left;
+                        margin: -4px 0 0 33px;
+                        
+                        i {
+                            margin-right: inherit;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+
+            .no-channel-message {
+                .secondary-message {
+                    margin: 1em 0 0 0;
+                }
+            }
+
+            .modal-prev-bar {
+                right: 0;
+                left: inherit;
+            }
+
+            .modal-image {
+                .modal-image__wrapper {
+                    .modal-close {
+                        right: inherit;
+                        left: -13px;
+                    }
+
+                    .spinner {
+                        .file__loading {
+                            right: 50%;
+                            left: inherit;
+                            margin-right: -16px;
+                            margin-left: inherit;
+                        }
+                    }
+                }
+
+                .image-control {
+                    float: right;
+                    
+                    &.image-next {
+                        float: left;
+                    }
+                }
+
+                .modal-button-bar {
+                    .image-links {
+                        a,
+                        span {
+                            float: left;
+                        }
+                    }
+
+                    .text {
+                        margin-right: 5px;
+                        margin-left: inherit;
+                    }
+
+                    .public-link {
+                        margin-right: inherit;
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+            &.more-channel__modal {
+                .channel-count {
+                    float: left;
+                }
+            }
+
+            .channel-switch__modal {
+                .modal-body {
+                    padding: 20px 0 0 0;
+                }
+
+                .modal__hint {
+                    padding: 0 inherit 16px 16px;
+                }
+            }
+
+            .channel-switch__suggestion-box {
+                .badge {
+                    right: inherit;
+                    left: 16px;
+                }
+
+                .form-control {
+                    margin: 0 inherit 16px 16px;
+                }
+
+                .suggestion-list__divider {
+                    margin: 4px 12px 4px 0;
+                }
+            }
+        }
+
+        .more-modal {
+            .modal-body {
+                overflow-x: hidden;
+                padding: 10px 0 15px 0;
+            }
+
+            .filter-row {
+                margin: 5px 0 10px 0;
+            }
+
+            .member-count {
+                float: left;
+            }
+
+            .member-show {
+                float: left;
+                margin-right: inherit;
+                margin-left: 3px;
+            }
+
+            .member-select__container {
+                .member-count {
+                    margin: 12px 3px 0 0;
+                }
+
+                select {
+                    float: right;
+                    margin: 1px 2px 0 5px;
+                }
+            }
+        }
+
+        .modal-tabs {
+            .nav-tabs {
+                >li {
+                    margin-right: inherit;
+                    margin-left: 0px;
+                }
+            }
+        }
+
+        .more-modal__list {
+            .more-modal__details {
+                padding-right: 10px;
+                padding-left: inherit;
+            }
+
+            .more-modal__actions {
+                padding-right: 8px;
+                padding-left: inherit;
+            }
+
+            .more-modal__right {
+                .control-label {
+                    padding: 5px 5px 0 0;
+                }
+            }
+
+            .more-modal__bottom>.has-error {
+                padding-right: 5px;
+                padding-left: inherit;
+            }
+        }
+
+        .member-select__container {
+            right: inherit;
+            left: 15px;
+        }
+
+        .filtered-user-list {
+            .filter-controls {
+                padding: 1em 0 0 1.5em;
+
+                .filter-control__next {
+                    float: left;
+                }
+            }
+
+            .filter-button {
+                margin-right: 0;
+                margin-left: inherit;
+                padding-right: 0;
+                padding-left: inherit;
+            }
+        }
+
+        .team-selector-modal, .channel-selector-modal {
+            .more-modal__row {
+                .team-name {
+                    padding-right: 5px;
+                    padding-left: inherit;
+                }
+                .icon__lock, .icon__globe {
+                    margin-right: inherit;
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        .modal-body {
+            .manage-teams__teams {
+                .Menu {
+                    margin-right: inherit;
+                    margin-left: 20px;
+                }
+            }
+        }
+        //// modal END
+
+        //// multi-select START
+        .multi-select__help {
+            padding: 10px inherit 0 15px;
+        }
+        //// multi-select END
+
+        //// oauth START
+        .prompt {
+            padding: 1em inherit 0 2em;
+            
+            .prompt__heading {
+                img {
+                    margin-right: inherit;
+                    margin-left: 15px;
+                }
+            }
+
+            .prompt__buttons {
+                text-align: left;
+            }
+        }
+        //// oauth END
+
+        //// permissions START
+        .permissions-tree {
+            .permissions-tree--header {
+                .permission-name {
+                    margin-right: 16px;
+                    margin-left: inherit;
+                }
+            }
+        
+            .permission-arrow {
+                margin: 5px 6px 4px 7px;
+            }
+        
+            .permission-check {
+                margin-right: inherit;
+                margin-left: 5px;
+            }
+        
+            .permission-group {
+                .permission-group-permissions {
+                    .permission-row {
+                        padding: 0 48px 0 0;
+                    }
+        
+                    .permission-group-row {
+                        padding: 0 25px 0 0;
+        
+                        &.combined {
+                            padding: 0 48px 0 0;
+                        }
+                    }
+        
+                    .permission-group-permissions {
+                        .permission-row {
+                            padding: 0 78px 0 0;
+                        }
+        
+                        .permission-group-row {
+                            padding: 0 60px 0 0;
+        
+                            &.combined {
+                                padding: 0 78px 0 0;
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .permission-row,
+            .permission-group-row {
+                &:hover {
+                    border-right: 2px solid $primary-color;
+                    border-left: inherit;
+                }
+            }
+        }
+        
+        .permissions-scheme-summary {
+            border-right: 2px solid $transparent;
+            border-left: inherit;
+            
+            &:hover {
+                border-right: 2px solid $primary-color;
+                border-left: inherit;
+            }
+            .permissions-scheme-summary--teams {
+                padding: 1.5em 0 0.5em 0;
+        
+                .team {
+                    margin-right: inherit;
+                    margin-left: 10px;
+                }
+            }
+        }
+        
+        .team-info-block {	
+            .team-data {	
+                padding: 0 10px 0 0;	
+            }	
+        }
+        //// permissions END
+
+        //// popover START
+        .popover {
+            .popover__row {
+                margin: 0 inherit 0 -15px;
+                padding: 9px inherit 0 15px;
+
+                > a {
+                    i {
+                        margin-right: inherit;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+
+        .user-profile-popover {
+            .popover-title {
+                &:before {
+                    right: 0;
+                    left: inherit;
+                }
+            }
+        }
+
+        .user-popover__role {
+            margin-right: 10px;
+            margin-left: inherit;
+        }
+
+        .search-help-popover {
+            right: auto;
+            left: 0;
+
+            .search-autocomplete__divider {
+                margin: 10px 0 5px 0;
+                
+                > span {
+                    padding-right: inherit;
+                    padding-left: 10px;
+                }
+
+                &:before {
+                    right: 0;
+                    left: inherit;
+                }
+            }
+
+            .search-autocomplete__item {
+                margin: 3px 5px 0 0;
+                
+                .fa {
+                    margin-right: inherit;
+                    margin-left: 5px;
+                }
+
+                .Avatar {
+                    margin-right: inherit;
+                    margin-left: 6px;
+                }
+            }
+
+            &.bottom > .arrow {
+                right: 30px;
+                left: inherit;
+            }
+
+            ul {
+                padding-right: 17px;
+                padding-left: inherit;
+            }
+        }
+
+        .member-list__popover {
+            margin-right: -95px;
+            margin-left: inherit;
+
+            .more-modal__header {
+                .icon {
+                    margin: 0 24px 0 38px;
+                }
+            }
+
+            .more-modal__list {
+                .more-modal__row {
+                    padding: 0 20px 0 12px;
+
+                    .more-modal__actions {
+                        margin-right: 12px;
+                        margin-left: inherit;
+                    }
+
+                    &:hover {
+                        border-right: 3px solid transparent;
+                        border-left: inherit;
+                        padding-right: 17px;
+                        padding-left: inherit;
+                    }
+
+                    &.more-modal__row--button {
+                        border-right: none;
+                        border-left: inherit;
+                        
+                        button {
+                            right: 0;
+                            left: inherit;
+                        }
+                    }
+                }
+
+                .more-modal__details {
+                    padding-right: 16px;
+                    padding-left: inherit;
+                }
+            }
+
+            .popover-content {
+                .more__name {
+                    margin-right: 6px;
+                    margin-left: inherit;
+                }
+            }
+        }
+
+        .channel_search {
+            .create_button {
+                margin-right: inherit;
+                margin-left: 16px;
+            }
+        }
+        //// popover END
+        
+        //// remove-image START
+        .remove-image__btn {
+            right: inherit;
+            left: -9px;
+            
+            span {
+                margin-right: 1px;
+                margin-left: inherit;
+            }
+        }
+        //// remove-image END
+
+        //// save-button START
+        .save-button {
+            .icon {
+                margin-right: inherit;
+                margin-left: 10px;
+            }
+        }
+        //// save-button END
+
+        //// scrollbar START
+        .scrollbar--view {
+            margin-right: inherit !important;
+            margin-left: -8px;
+        }
+        //// scrollbar END
+
+        //// search START
+        .search-item-snippet {
+            ul,
+            ol {
+                padding-right: 20px;
+                padding-left: inherit;
+            }
+        }
+
+        .search__icon {
+            right: 9px;
+            left: inherit;
+        }
+
+        .sidebar__search-clear {
+            right: inherit;
+            left: 0;
+        }
+
+        .search-bar__container {
+            padding-right: 8px;
+            padding-left: 0;
+        }
+
+        .search__form {
+            .search-bar__container & {
+                margin: 16px 0 0 0;
+            }
+
+            .LoadingSpinner {
+                right: inherit;
+                left: 8px;
+            }
+        }
+
+        .search-item__container {
+            .post {
+                padding: 0 inherit 1em 1em;
+
+                &:hover {
+                    .post__header {
+                        padding-right: inherit;
+                        padding-left: 105px;
+                    }
+                }
+
+                .post__header {
+                    padding-right: inherit;
+                    padding-left: 70px;
+                }
+
+                .search-channel__archived {
+                    float: left;
+                }
+            }
+        }
+
+        .col__controls {
+            right: inherit;
+            left: 0;
+            
+            .search-item__jump {
+                padding: 2px inherit 0 7px;
+            }
+        }
+        //// search END
+        
+        //// select START
+        .select-suggestion-container {
+            margin: 8px 0 0 8px;
+
+            &:after {
+                right: inherit;
+                left: 1rem;
+            }
+
+            .form-control {
+                padding-right: inherit;
+                padding-left: 3rem;
+            }
+        }
+        //// select END
+
+        //// sidebar-card START
+        .post-card--info {
+            .post-card--post-by {
+                padding-right: inherit;
+                padding-left: 10px;
+            }
+        
+            .more-modal__image {
+                margin: 0px 4px 0px 2px
+            }
+        }
+        //// sidebar-card END
+
+        //// sidebar-header-dropdown-button START
+        .SidebarHeaderDropdownButton {
+            .header__info {
+                padding: 3px 8px 0 15px;
+            }
+        }
+        //// sidebar-header-dropdown-button END
+
+        //// sidebar-header START
+        .SidebarHeader {
+            .status-selector {
+                margin: 3px 6px 0 8px;
+            }
+        }
+        //// sidebar-header END
+
+        //// status-icon START
+        .status-wrapper {
+            .sidebar--left & {
+                .status {
+                    right: inherit;
+                    left: -6px;
+
+                    .icon__container {
+                        &:after {
+                            right: 4px;
+                            left: inherit;
+                        }
+                    }
+
+                    svg {
+                        right: 0;
+                        left: inherit;
+                    }
+                }
+            }
+
+            .status {
+                right: inherit;
+                left: -3px;
+            }
+        }
+
+        .status {
+            margin: 0 1px 0 7px;
+            
+            &.status--group {
+                right: 1px;
+                left: inherit;
+                margin: 0 -1px 0 9px;
+                
+                .mentions__name & {
+                    right: 0;
+                    left: inherit;
+                    margin-right: 0;
+                    margin-left: 6px;
+                }
+            }
+
+            .fa-lock {
+                margin-right: 1px;
+                margin-left: inherit;
+            }
+        }
+        //// status-icon END
+
+        //// suggestion-list START
+        .suggestion-list {
+            .badge {
+                right: inherit;
+                left: 10px;
+            }
+        }
+
+        .suggestion-list__content {
+            .command {
+                padding: 5px inherit 8px 10px;
+                
+                .command__desc {
+                    margin-right: 5px;
+                    margin-left: inherit;
+                }
+            }
+        }
+
+        .suggestion-list__divider {
+            margin: 5px 5px 5px 0;
+            
+            > span {
+                padding: 0 5px 0 10px;
+            }
+
+            &:before {
+                right: 0;
+                left: inherit;
+            }
+        }
+
+        .suggestion-list__no-results {
+            margin: 7px inherit 2px 10px;
+            
+            > span {
+                padding: 0 5px 0 10px;
+            }
+        }
+        //// suggestion-list END
+
+        //// system-notice START
+        .system-notice {
+            padding: 18px inherit 0 20px;
+            right: inherit;
+            left: 12px;
+        }
+
+        .system-notice__title {
+            padding: 3px 8px 0 0;
+        }
+
+        .system-notice__info {
+            .fa {
+                margin-right: inherit;
+                margin-left: 4px;
+            }
+        }
+
+        .system-notice__body {
+            padding: 18px 0 16px 0;
+        }
+
+        .system-notice__footer {
+            .btn {
+                &:last-child {
+                    border-right: 1px solid alpha-color($black, .2);
+                    border-left: inherit;
+                }
+            }
+        }
+        //// system-notice END
+
+        //// team-channel-settings START
+        .groups-list-no-padding {
+            div.group-row {
+                padding-right: 20px;
+                padding-left: inherit;
+            }
+            div.groups-list--header {
+                div.group-name.adjusted {
+                    margin-right: 20px;
+                    margin-left: inherit;
+                }
+                div.group-description.adjusted {
+                    margin-right: inherit;
+                    margin-left: 22px;
+                }
+
+                div.group-description.group-description-adjusted {
+                    margin-right: inherit;
+                    margin-left: 22px;
+                }
+
+                div.group-name.group-name-adjusted {
+                    margin-right: inherit;
+                    margin-left: 22px;
+                }
+            }
+        }
+        //// team-channel-settings END
+
+        //// toggle START
+        // Mixin for Default Switch Styles
+        // Variables: $size, $margin, $color, $bg, $active-bg, $font-size
+        @mixin toggle-mixin($size: $toggle-default-size, $margin: $toggle-default-margin, $font-size: $toggle-default-font-size){
+            // color: $color;
+            // background: $bg;
+            padding: 0;
+            position: relative;
+            border: none;
+            height: $size;
+            min-width: $size * 2;
+            border-radius: $size;
+            float: left;
+
+            &:focus,
+            &.focus {
+                &,
+                &.active {
+                    outline: none;
+                }
+            }
+
+            > .handle {
+                position: absolute;
+                top: 0.4rem;
+                right: 0.4rem;
+                left: inherit;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 1rem;
+                background: #fff;
+                transition: right .25s;
+            }
+            &.active {
+                transition: background-color .25s;
+                > .handle {
+                    right: inherit;
+                    left: 0.4rem;
+                    transition: right .25s;
+                }
+            }
+        }
+
+        // Apply Mixin to different sizes & colors
+        .btn-toggle {
+            @include toggle-color;
+            &.disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+
+            &.btn-lg {
+                @include toggle-mixin($size: 2.8rem, $font-size: 1rem, $margin: 5rem);
+            }
+
+            &.btn-sm {
+                @include toggle-mixin($font-size: .55rem, $margin: .5rem);
+            }
+
+            &.btn-xs {
+                @include toggle-mixin($size:1rem,$margin:0);
+            }
+
+            .bg-text {
+                font-size: 1.4rem;
+                color: #fff;
+                font-weight: 600;
+
+                &.off {
+                    padding: 0 3.4rem 0 1.6rem;
+                }
+                &.on {
+                    padding: 0 1.6rem 0 3.4rem;
+                }
+            }
+        }
+        //// toggle END
+
+        //// tooltip START
+        .tooltip {
+            .tooltip-inner {
+                padding: 5px inherit 6px 10px;
+            }
+        }
+        //// tooltip END
+
+        //// tutorial START
+        .tip-backdrop {
+            right: 0;
+            left: inherit;
+        }
+
+        .tip-overlay {
+            &.tip-overlay--sidebar {
+                margin: 50px 10px 0 0;
+                
+                .tutorial__footer {
+                    right: 0;
+                    left: inherit;
+                }
+
+                .arrow {
+                    border-right-width: 0;
+                    border-left-width: inherit;
+                    border-right-color: inherit;
+                    border-left-color: $white;
+                    right: -10px;
+                    left: inherit;
+                }
+            }
+
+            &.tip-overlay--header--left {
+                margin: 10px 10px 0 0;
+
+                .arrow {
+                    border-right-width: 0;
+                    border-left-width: inherit;
+                    border-right-color: inherit;
+                    border-left-color: $white;
+                    right: -10px;
+                    left: inherit;
+                }
+            }
+
+            &.tip-overlay--header--bottom {
+                .arrow {
+                    right: 50%;
+                    left: inherit;
+                    margin-right: -10px;
+                    margin-left: inherit;
+                }
+            }
+
+            &.tip-overlay--chat {
+                .arrow {
+                    right: 50%;
+                    left: inherit;
+                    margin-right: -10px;
+                    margin-left: inherit;
+                }
+            }
+
+            h4 {
+                margin: 5px 0 15px 0;
+            }
+
+            .tutorial__circles {
+                margin: 1.5em -4px -1.7em 0;
+            }
+        }
+
+        .tip-button {
+            right: inherit;
+            left: -10px;
+        }
+
+        .tip-div {
+            right: inherit;
+            left: 0;
+            
+            &.tip-overlay--header {
+                right: inherit;
+                left: 2px;
+            }
+
+            &.tip-overlay--sidebar {
+                right: 0;
+                left: inherit;
+            }
+        }
+
+        .tutorial-steps__container {
+            right: 0;
+            left: inherit;
+            
+            .tutorial__content {
+                .tutorial__steps {
+                    text-align: right;
+                }
+            }
+
+            h1 {
+                margin: -20px 0 30px 0;
+            }
+
+            .tutorial-skip {
+                margin-right: 13px;
+                margin-left: inherit;
+            }
+        }
+        //// tutorial END
+
+        //// videos START
+        .post {
+            .video-div {
+                .block {
+                    right: 50%;
+                    left: inherit;
+                    margin: -75px -100px 0 0;
+                }
+            }
+
+            .play-button {
+                right: inherit;
+                left: 51px;
+                
+                span {
+                    border-right: 60px solid alpha-color($white, .4);
+                    border-left: inherit;
+                    right: 20px;
+                    left: inherit;
+                }
+            }
+        }
+        //// videos END
+    /*### components END ###*/
+
+    /*### layout START ###*/
+        //// channel-icon START
+        .channel-icon {
+            margin: 0 1px 0 7px;
+            text-align: right;
+        }
+        //// channel-icon END
+        
+        //// content START
+        .inner-wrap {
+            &.move--left {
+                .header-list__right {
+                    float: left;
+                    padding-right: inherit !important;
+                    padding-left: 0px !important;
+                }
+            }
+
+            &.move--right {
+                .header-list__right {
+                    float: left;
+                    margin-right: inherit;
+                    margin-left: -18px;
+                    padding-right: inherit !important;
+                    padding-left: 0px !important;
+                }
+            }
+        }
+
+        .app__content {
+            margin-right: 220px;
+            margin-left: 0;
+        }
+        //// content END
+
+        //// footer START
+        .footer-pane {
+            .footer-link {
+                &.copyright {
+                    padding-right: inherit;
+                    padding-left: 0;
+                }
+            }
+        }
+        //// footer END
+
+        //// forms START
+        .form-horizontal {
+            .form__label {
+                padding-right: inherit;
+                padding-left: 3px;
+                text-align: right;
+            }
+        }
+        
+        .multi-select__radio {
+            .icon {
+                padding-right: inherit;
+                padding-left: 1px;
+                margin-right: inherit;
+                margin-left: 6px;
+                
+                & + span {
+                    margin-right: inherit;
+                    margin-left: 4px;
+                }
+            }
+        }
+        //// forms END
+
+        //// headers START
+        .channel-header {
+
+            .channel-header__favorites {
+                float: right;
+                margin: 0 0 0 5px;
+            }
+
+            .channel-header__mute {
+                float: right;
+            }
+
+            .flex-parent {
+                display: flex;
+                padding: 0 16px;
+            }
+
+            .flex-child {
+                &:first-child {
+                    padding: 0 0 0 28px;
+                }
+            }
+
+            .channel-header_plugin-dropdown {
+                svg,
+                .fa {
+                    margin-right: inherit;
+                    margin-left: 4px;
+                }
+
+                a {
+                    border-right: 3px solid transparent;
+                    border-left: inherit;
+                }
+            }
+
+            .channel-header__icon {
+                margin: 16px 8px 0 0;
+                
+                .icon__text {
+                    margin-right: inherit;
+                    margin-left: 4px;
+                }
+            }
+
+            &.alt {
+                th {
+                    &.header-list__right {
+                        padding-right: inherit;
+                        padding-left: 4px;
+                    }
+                }
+            }
+        }
+
+        .header-dropdown__icon {
+            margin: 0 8px 0 0;
+        }
+
+        .channel-header__info {
+            .dropdown-toggle {
+                text-align: right;
+            }
+
+            .channel-header__description {
+                blockquote {
+                    padding: 0 20px 0 0;
+                    
+                    &:before {
+                        right: 2px;
+                        left: inherit;
+                    }
+                }
+
+                .status {
+                    margin-right: inherit;
+                    margin-left: 3px;
+                }
+
+                code {
+                    padding: 2px 0 0 5px;
+                }
+            }
+
+            .has-guest-header {
+                margin-right: inherit;
+                margin-left: 3px;
+
+                &:after {
+                    margin: 0 5px 0 2px;
+                }
+            }
+
+            .header-status__text {
+                margin-right: inherit;
+                margin-left: 3px;
+
+                &:after {
+                    margin: 0 5px 0 2px;
+                }
+            }
+        }
+
+        .channel-intro {
+            .intro-links {
+                margin: 0 0 10px 1.5em;
+
+                .fa {
+                    margin-right: inherit;
+                    margin-left: 5px;
+                }
+            }
+
+            .channel-intro-img {
+                .status-wrapper {
+                    margin: 0 0 10px 10px;
+                }
+            }
+        }
+
+        // Team Header in Sidebar
+        .sidebar--left,
+        .sidebar--menu,
+        .admin-sidebar {
+            .team__header {
+                &:before {
+                    right: 0;
+                    left: inherit;
+                }
+                
+                .dropdown {
+                    padding: 3px 16px 0 0;
+                }
+
+                .dropdown-menu {
+                    margin: 4px 10px 0 0;
+                }
+
+                .sidebar-header-dropdown,
+                .admin-navbar-dropdown {
+                    right: 0;
+                    margin-right: inherit;
+                    margin-left: -22px;
+                    left: 22px;
+
+                    .sidebar-header-dropdown__toggle,
+                    .admin-navbar-dropdown__toggle {
+                        right: 0;
+                        left: inherit;
+                    }
+
+                    .dropdown-menu {
+                        margin-right: 10px;
+                        margin-left: inherit;
+                    }
+
+                    .sidebar-header-dropdown__icon,
+                    .admin-navbar-dropdown__icon {
+                        float: left;
+                        right: inherit;
+                        left: -5px;
+                    }
+                }
+
+                .Avatar {
+                    float: right;
+                }
+
+                .header__info {
+                    padding: 2px 0 0 16px;
+                    
+                    .sidebar-header-dropdown__icon {
+                        right: inherit;
+                        left: -5px;
+                    }
+                }
+            }
+        }
+
+        .channel-header__navbar {
+            .heading {
+                margin-right: inherit;
+                margin-left: 3px;
+            }
+        }
+
+        .app__body {
+            .channel-header__links {
+                margin-right: inherit;
+                margin-left: 1px;
+                
+                th {
+                    &:last-child {
+                        div {
+                            margin-right: inherit;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+
+                .channel__wrap.move--left & {
+                    right: inherit;
+                    left: -400px;
+                }
+            }
+        }
+
+        .channel-header-archived-icon {
+            margin-right: inherit;
+            margin-left: 5px;
+        }
+        //// headers END
+
+        //// markdown START
+        //// markdown END
+
+        //// navigation START
+        .nav-tabs {
+            > li {
+                margin-right: inherit;
+                margin-left: 5px;
+
+                > a {
+                    .small {
+                        margin-right: 4px;
+                        margin-left: inherit;
+                    }
+                }
+            }
+        }
+
+        #navbar {
+            input {
+                margin: 0 2px 0 5px;
+            }
+
+            .navbar-default {
+                .navbar-toggle {
+                    float: right;
+                    
+                    &.navbar-right__icon {
+                        margin: 9px 0 0 10px;
+                    }
+
+                    &.menu-toggle {
+                        margin-left: 16px;
+                    }
+
+                    .icon__search {
+                        svg {
+                            right: -1px;
+                            left: inherit;
+                        }
+                    }
+                }
+
+                .navbar-brand {
+                    .header-dropdown__icon {
+                        margin-right: 6px;
+                        margin-left: inherit;
+                    }
+
+                    .description {
+                        margin-right: inherit;
+                        margin-left: 1em;
+                    }
+                }
+            }
+
+            .sidebar-name {
+                span {
+                    margin-right: 2px;
+                    margin-left: inherit;
+                }
+            }
+
+            .channel-create-btn {
+                margin-right: inherit;
+                margin-left: 15px;
+            }
+        }
+
+        .badge-notify {
+            right: 4px;
+            left: inherit;
+        }
+        //// navigation END
+
+        //// post-right START
+        .post-right__container {
+            .post-right-root-message {
+                padding: 1em 0 0 1em;
+            }
+
+            .help_format_text {
+                right: inherit;
+                left: auto;
+            }
+
+            .post {
+                &.post--root {
+                    padding-right: 1.5em;
+                    padding-left: inherit;
+                }
+
+                .post__header {
+                    .col__reply {
+                        text-align: left;
+                    }
+                }
+
+                &.post--compact {
+                    .post__body {
+                        padding-right: 0;
+                        padding-left: inherit;
+                    }
+
+                    &.same--root {
+                        &.post--comment {
+                            padding-right: 1em;
+                            padding-left: inherit;
+
+                            .post__header {
+                                margin-right: 0;
+                                margin-left: inherit;
+                            }
+
+                            .flag-icon__container, .card-icon__container {
+                                right: auto;
+                                left: inherit;
+                            }
+                        }
+                    }
+                }
+
+                .post__img {
+                    padding: 2px 0 0 8px;
+                }
+            }
+
+            .post-create__container {
+                .msg-typing {
+                    float: right;
+                }
+
+                .post-right-comments-upload-in-progress {
+                    margin-right: inherit;
+                    margin-left: 10px;
+                }
+
+                .emoji-picker {
+                    right: inherit;
+                    left: 0px;
+                }
+            }
+        }
+
+        .post-right-header {
+            padding: 10px 15px 0 10px;
+        }
+
+        .post-right-root-container {
+            ul {
+                padding-right: 0;
+                padding-left: inherit;
+            }
+        }
+
+        .card-info-channel__name {
+            margin: 0 14px 15px 0;
+        }
+
+        .post-right-root-container li {
+            padding-right: inherit;
+            padding-left: 3px;
+        }
+
+        .post-right-create-comment-container {
+            right: 0;
+            left: inherit;
+        }
+        //// post-right END
+        
+        //// post START
+        .textarea-wrapper {
+            .textbox-preview-area {
+                right: 0;
+                left: inherit;
+            }
+
+            .textbox-preview-link {
+                margin-right: inherit;
+                margin-left: 8px;
+            }
+        }
+
+        .help__format-text {
+            .textbox-preview-link {
+                margin-right: 15px;
+                margin-left: inherit;
+            }
+        }
+
+        .file-overlay {
+            right: 0;
+            left: inherit;
+            
+            &.right-file-overlay {
+                .overlay__circle {
+                    margin: -150px -150px 0 0;
+                }
+
+                .overlay__files {
+                    margin: 60px 0 15px auto;
+                }
+            }
+
+            .overlay__circle {
+                right: 50%;
+                left: inherit;
+                margin: -185px -185px 0 0;
+            }
+
+            .overlay__files {
+                margin: 75px 0 20px auto;
+            }
+
+            .overlay__logo {
+                right: 50%;
+                left: inherit;
+                margin-right: -50px;
+                margin-left: inherit;
+            }
+
+            .fa {
+                margin-right: inherit;
+                margin-left: 8px;
+            }
+        }
+
+        #post-list {
+            .post-list__loading {
+                i {
+                    margin-right: inherit;
+                    margin-left: 2px;
+                }
+            }
+
+            .post-list-holder-by-time {
+                &.normal_post_list {
+                    padding: 1em 0 0 0;
+                    
+                    .post-list__content {
+                        padding: 14px 0px 7px 0px;
+                    }
+                }
+            }
+
+            .more-messages-text {
+                margin: 5px 0 10px 0;
+            }
+
+            .new-messages__button {
+                right: 50%;
+                left: inherit;
+                
+                .fa {
+                    margin-right: inherit;
+                    margin-left: .5rem;
+                }
+
+                .icon {
+                    margin-right: 5px;
+                    margin-left: inherit;
+                }
+            }
+        }
+
+        .post-list__timestamp {
+            right: 0;
+            left: inherit;
+        }
+
+        .post-list__arrows {
+            right: 9px;
+            left: inherit;
+        }
+
+        .post-create__container {
+            .custom-textarea {
+                padding: 12px 15px 12px 0 !important;
+                
+                &:not(.custom-textarea--emoji-picker) {
+                    padding-right: inherit;
+                    padding-left: 40px;
+                }
+
+                &.custom-textarea--emoji-picker {
+                    padding-right: inherit;
+                    padding-left: 90px !important;
+                }
+            }
+
+            .emoji-picker {
+                right: inherit;
+                left: 0;
+            }
+
+            .scroll {
+                .post-body__actions {
+                    right: inherit;
+                    left: 10px;
+                }
+
+                .custom-textarea {
+                    &:not(.custom-textarea--emoji-picker) {
+                        padding-right: inherit;
+                        padding-left: 50px;
+                    }
+
+                    &.custom-textarea--emoji-picker {
+                        padding-right: inherit;
+                        padding-left: 90px;
+                    }
+                }
+            }
+
+            .post-create-body {
+                .send-button {
+                    border-right: 1px solid transparent;
+                    border-left: inherit;
+                    padding-right: inherit;
+                    padding-left: 4px;
+                }
+
+
+                .icon--emoji-picker {
+                    .icon--attachment {
+                        & + input {
+                            right: inherit;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .post-body__actions {
+            right: inherit;
+            left: 0;
+            
+            > div {
+                &:first-child {
+                    border-right: inherit;
+                    border-left: 1px solid transparent;
+                }
+            }
+            
+            .icon--attachment {
+                & + input {
+                    right: inherit;
+                    left: 0;
+                }
+            }
+        }
+
+        .post-create-footer {
+            padding: 3px 0 0 0;
+
+            .help__text {
+                text-align: left;
+
+                a,
+                button {
+                    margin-right: 10px;
+                    margin-left: inherit;
+                }
+            }
+        }
+
+        .post {
+            padding: 8px 1.5em 0 .5em; // If this needs to be changed then .post-row__padding needs to be adjusted accordingly
+            
+            &.post--thread {
+                &.same--user {
+                    padding: 0 1em 0 .5em;
+
+                    .post__header {
+                        .post__header--info {
+                            right: -5px;
+                            left: inherit;
+
+                            .post__time {
+                                right: -14px;
+                                left: inherit;
+                                text-align: left;
+                            }
+
+                            .flag-icon__container, .card-icon__container {
+                                right: 37px;
+                                left: inherit;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.post--compact {
+                .card-icon__container {
+                    margin: 0 -4px 0 7px;
+                }
+
+                .post-message--collapsed + .post-image__columns {
+                    &:before {
+                        content: '';
+                        right: 0;
+                        left: inherit;
+                    }
+                }
+
+                .attachment {
+                    .attachment__body__wrap {
+                        .btn-close {
+                            right: -2px;
+                            left: inherit;
+                        }
+                    }
+                }
+
+                &.post--comment {
+                    .attachment {
+                        .attachment__body__wrap {
+                            .btn-close {
+                                right: -13px;
+                                left: inherit;
+                            }
+                        }
+                    }
+                }
+
+                .status-wrapper {
+                    .status {
+                        right: -2px;
+                        left: auto;
+                    }
+                }
+
+                blockquote {
+                    padding: 3px 20px 3px 0px;
+                    
+                    &:before {
+                        right: 0;
+                        left: inherit;
+                    }
+                }
+
+                .post__body {
+                    padding: 2px 0 0 0;
+
+                    ol,
+                    ul {
+                        padding-right: 20px;
+                        padding-left: inherit;
+                    }
+
+                    .post-image__column {
+                        margin: 3px 0px 3px 10px;
+                    }
+                }
+
+                .post-image__column {
+                    .post-image__details {
+                        .icon {
+                            float: right;
+                            margin-right: inherit;
+                            margin-left: 5px;
+                        }
+                    }
+
+                    .post-image__name {
+                        i {
+                            margin-right: inherit;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+
+            &.post--comment {
+                .post__body {
+                    border-right: 4px solid $gray;
+                    border-left: inherit;
+                    padding-right: 7px;
+                    padding-left: inherit;
+
+                    &.mention-comment {
+                        border-right: 4px solid $yellow;
+                        border-left: inherit;
+                    }
+                }
+
+                .attachment {
+                    .attachment__body__wrap {
+                        .btn-close {
+                            right: -11px;
+                            left: inherit;
+                        }
+                    }
+                }
+            }
+
+            &.same--root {
+                &.same--user {
+                    padding: 0 1.5em 0 .5em;
+
+                    .flag-icon__container, .card-icon__container {
+                        right: 37px;
+                        left: inherit;
+                    }
+                }
+            }
+
+            .post__content {
+                padding: 0 5px 0 8px;
+            }
+
+            &:hover {
+                .post__header {
+                    padding: 0 0 0 55px;
+                }
+            }
+
+            .post__header {
+                .col__name {
+                    margin-right: inherit;
+                    margin-left: 7px;
+                    
+                    .user-popover {
+                        text-align: right;
+                    }
+
+                    .colon {
+                        margin-right: 2px;
+                        margin-left: inherit;
+                    }
+                }
+
+                .col__reply {
+                    right: inherit;
+                    left: 0;
+                    
+                    .comment-icon__container {
+                        padding: 0 0 0 4px;
+                    }
+                }
+
+                .col__remove {
+                    right: inherit;
+                    left: 10px;
+                }
+            }
+
+            .post__img {
+                padding-right: inherit;
+                padding-left: 10px;
+                text-align: left;
+            }
+
+            .dropdown {
+                &:last-child {
+                    margin-right: inherit;
+                    margin-left: 0;
+                }
+
+                .dropdown-menu {
+                    right: auto;
+                    left: 0;
+                }
+            }
+
+            .post__remove {
+                float: left;
+                right: inherit;
+                left: -10px;
+            }
+
+            .post__body {
+                &.post--ephemeral {
+                    padding-right: inherit !important;
+                    padding-left: 20px !important;
+                }
+
+                p + p {
+                    margin: 0.5em 0 0 0;
+                }
+
+                ul,
+                ol {
+                    li {
+                        ul,
+                        ol {
+                            padding: 0 20px 0 0;
+                        }
+                    }
+
+                    li.list-item--task-list ul,
+                    li.list-item--task-list ol {
+                        margin-right: 20px;
+                        margin-left: inherit;
+                    }
+
+                    li.list-item--task-list ul {
+                        padding-right: 0;
+                        padding-left: inherit;
+                    }
+
+                    li:not(.list-item--task-list) li.list-item--task-list,
+                    li:not(.list-item--task-list) li.list-item--task-list ~ li {
+                        margin-right: -20px;
+                        margin-left: inherit;
+                    }
+                }
+
+                ul li.list-item--task-list ~ li:not(.list-item--task-list) {
+                    &:before {
+                        margin-right: inherit;
+                        margin-left: 8px;
+                    }
+                }
+
+                .pending-post-actions {
+                    right: inherit;
+                    left: 0;
+                }
+
+                .post-reaction-list {
+                    padding: 4px 0 0 0;
+                }
+
+                .post-reaction {
+                    margin-right: inherit;
+                    margin-left: 5px;
+                    padding: 0 3px 0 4px;
+
+                    .post-reaction__emoji {
+                        margin: 0 0 0 3px;
+                    }
+                }
+            }
+
+            .post__link {
+                margin: 2px 0 5px 0;
+            }
+
+            .post__embed-visibility {
+                &.pull-left {
+                    margin: 4px 0 0 5px;
+                }
+            }
+
+            .post__time {
+                margin-right: inherit;
+                margin-left: 4px;
+            }
+
+            .post-waiting {
+                .spinner {
+                    right: inherit;
+                    left: 8px;
+                }
+
+                .post-message {
+                    padding-right: inherit;
+                    padding-left: 24px;
+                }
+            }
+
+            .post__reply {
+                margin-right: inherit;
+                margin-left: 6px;
+            }
+
+            .comment-icon__container {
+                .comment-count {
+                    margin-right: 2px;
+                    margin-left: inherit;
+                }
+
+                .comment-icon {
+                    margin: 0 5px 0 1px;
+                }
+            }
+
+            .card-icon__container {
+                margin: 0 4px 0 6px;
+            }
+
+            .web-embed-data {
+                padding: 2px 10px 0 0;
+                
+                .embed-title {
+                    margin: 3px 0 1px 0;
+                }
+            }
+        }
+
+        .post__pinned-badge {
+            margin: 0 4px 0 8px;
+        }
+
+        .permalink-popover {
+            margin-right: 50px !important;
+            margin-left: inherit !important;
+        }
+
+        .post-collapse__show-more, .post-attachment-collapse__show-more {
+            .post-collapse__show-more-button {
+                .fa {
+                    margin-right: inherit;
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        .post-message--collapsed {
+            .post-message__text-container {
+                
+                .all-emoji {
+                    .emoticon--unicode {
+                        .os--windows & {
+                            right: -4px;
+                            left: inherit;
+                        }
+                    }
+                }
+            }
+        }
+
+        .file-attachment-menu-item-input {
+            direction: rtl;
+            right: inherit;
+            left: 0;
+        }
+        //// post END
+
+        //// sidebar-left START
+        .sidebar--left {
+            border-right: none;
+            border-left: $border-gray;
+            right: 0;
+            left: inherit;
+
+            .sidebar-item {
+                .icon {
+                    margin: 0 1px 0 7px;
+                    text-align: right;
+                }
+
+                .icon__bot {
+                    right: -1px;
+                    left: inherit;
+                }
+            }
+
+            .sidebar-item__name {
+                padding-right: inherit;
+                padding-left: 10px;
+            }
+
+            .sidebar__divider {
+                .sidebar__divider__text {
+                    float: left;
+                }
+            }
+
+            .sidebar__switcher {
+                .switch__shortcut {
+                    margin-right: 4px;
+                    margin-left: inherit;
+                }
+            }
+
+            .search__form {
+                padding: 1em 0 0 1em;
+            }
+
+            .nav-pills {
+                > li {
+                    .badge {
+                        margin: 0 0 0 10px;
+                    }
+                }
+            }
+
+            .nav-pills__unread-indicator {
+                margin-right: 50%;
+                margin-left: inherit;
+                transform: translateX(50%);
+                
+                .icon {
+                    margin-right: 5px;
+                    margin-left: inherit;
+                }
+            }
+
+            .nav {
+                .sidebar-section__header {
+                    padding: 0 15px 0 12px;
+                }
+
+                li {
+                    
+                    > .nav-more {
+                        padding: 5px 15px 5px 0;
+                    }
+
+                    .sidebar-item {
+                        padding: 5px 15px 5px 5px;
+                        text-align: right;
+
+                        &.has-close {
+                            .btn-close {
+                                margin-right: inherit;
+                                margin-left: 7px;
+                            }
+                        }
+                    }
+
+                    &.active {
+                        button,a {
+                            &:before {
+                                right: 0;
+                                left: inherit;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .add-channel-btn {
+                float: left;
+            }
+        }
+
+        .join-channel-loading-gif {
+            margin-right: 10px;
+            margin-left: inherit;
+        }
+        //// sidebar-left END
+
+        //// sidebar-menu START
+        .sidebar--menu {
+            border-right: inherit;
+            border-left: $border-gray;
+            right: inherit;
+            left: 0;
+            
+            .icon {
+                margin-right: inherit;
+                margin-left: 8px;
+            }
+
+            .team__header {
+                .navbar-right {
+                    margin: 16px 0 0 -5px;
+                }
+
+                .team__name {
+                    float: right;
+                }
+            }
+
+            .nav {
+                > li {
+                    > a,
+                    > button {
+                        .icon {
+                            right: -5px;
+                            left: inherit;
+                        }
+                    }
+                }
+            }
+        }
+        //// sidebar-menu END
+
+        //// sidebar-right START
+        .sidebar--right {
+            @include translateX(-400px);
+            right: inherit;
+            left: 0;
+
+            &.move--left {
+                .sidebar--right__bg {
+                    right: -100%;
+                    left: inherit;
+                }
+            }
+
+            .sidebar-right__table {
+
+                > div:not(.sidebar-collapse__container) {
+
+                    &:last-child {
+                        .channel-header__icon {
+                            margin-right: 8px;
+                            margin-left: 16px;
+                        }
+                    }
+                }
+            }
+
+            .post {
+                &.post--compact {
+                    .card-icon__container {
+                        margin: 0px 6px 0 0;
+                    }
+
+                    .post__pinned-badge {
+                        margin: 0 5px 0 0;
+                    }
+                }
+
+                &.post--comment {
+                    .post__body {
+                        border-right: none;
+                        border-left: inherit;
+                    }
+                }
+
+                .post__content {
+                    padding: 0 0 0 10px;
+                }
+            }
+
+            .post-create__container {
+                .post-create {
+                    padding: .5em 0 0 15px;
+                }
+            }
+
+            .sidebar--right__back {
+                margin-right: -14px;
+                margin-left: inherit;
+            }
+
+            .sidebar-right__body {
+                border-right: $border-gray;
+                border-left: inherit;
+            }
+
+            .sidebar--right__buttons {
+                float: left;
+            }
+
+            .sidebar--right__close {
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .sidebar--right__title {
+                padding-right: 15px;
+                padding-left: 0;
+            }
+
+            .sidebar--right__header {
+                padding: 0 0 0 5px;
+            }
+
+            .sidebar--right__loading {
+                .fa {
+                    margin-right: inherit;
+                    margin-left: 5px;
+                }
+            }
+
+            .sidebar--right__subheader {
+                padding: .5em 0 0 1em;
+
+                ul {
+                    padding: 10px 30px 0 0;
+                }
+            }
+
+            .sidebar-collapse {
+                .fa {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        //// sidebar-right END
+
+        //// team-sidebar START
+        .team-sidebar {
+            right: 0;
+            left: inherit;
+            
+            .team-wrapper {
+                .team-container {
+                    &.active:before {
+                        right: 0;
+                        left: inherit;
+                    }
+        
+                    &.unread:before {
+                        right: 0;
+                        left: inherit;
+                    }
+                }
+            }
+        }
+        
+        .multi-teams {
+            .sidebar--left {
+                right: 65px;
+                left: inherit;
+            }
+        
+            .app__content {
+                margin-right: 285px;
+            }
+        }    
+        //// team-sidebar END
+
+        //// webhooks START
+        //// webhooks END
+    /*### layout END ###*/
+
+    /*### responsive START ###*/
+        //// desktop START
+        @media screen and (max-width: 1440px) {
+            .backstage-content {
+                margin: 46px 150px 46px 46px;
+            }
+        }
+
+        @media screen and (max-width: 1280px) {
+            .inner-wrap.move--left {
+                .post-collapse__show-more, .post-attachment-collapse__show-more {
+                    margin-right: 0;
+                    margin-left: inherit;
+                }
+            }
+
+            .inner-wrap {
+                &.move--left {
+                    .post-create__container {
+                        .channel-archived__close-btn {
+                            margin: 10px 0 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 1140px) {
+            .tip-overlay {
+                &.tip-overlay--chat {
+                    margin: -10px -10px 0 0;
+
+                    .arrow {
+                        right: auto;
+                        left: 15px;
+                    }
+                }
+            }
+
+            .inner-wrap {
+                &.move--left {
+                    .file-overlay {
+                        .overlay__circle {
+                            margin: -150px -150px 0 0;
+                        }
+
+                        .overlay__files {
+                            margin: 60px 0 15px auto;
+                        }
+                    }
+                }
+            }
+        }
+        //// desktop END
+        
+        //// mobile START
+        @media screen and (max-width: 768px) {
+            .app__content {
+                margin-right: 0;
+                margin-left: 0;
+            }
+
+            .integration__icon {
+                &.integration-list__icon {
+                    margin: 0 0 15px 20px;
+                }
+            }
+
+            .emoji-picker {
+                right: 0 !important;
+                left: auto !important;
+                transform: translateX(0) !important;
+            }
+
+            .emoji-picker__items {
+                .emoji-picker-items__container {
+                    .emoji-picker__item {
+                        >div {
+                            right: 50%;
+                            left: inherit;
+                            
+                            >img {
+                                right: -17px;
+                                left: inherit;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .emoji-picker__preview {
+                padding: 10px 0 0 10px;
+            }
+
+            .mobile-main-menu {
+                .Menu {
+                    &.dropdown-menu {
+                        padding-right: 0;
+                        padding-left: inherit;
+                        
+                        .MenuItem {
+                            > button,
+                            > a {
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .post__header {
+                .dropdown-menu {
+                    >li {
+                        >div {
+                            .SubMenu__icon {
+                                padding: 0 8px 0 5px !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .app__body {
+                .post {
+                    .Menu {
+                        right: 0;
+                        left: inherit;
+                        
+                        &:after {
+                            right: 0;
+                            left: inherit;
+                        }
+                    }
+                }
+            }
+
+            .member-role .member-menu,
+            .member-drop .member-menu {
+                right: inherit;
+                left: 0;
+            }
+
+            .post-create__container {
+                .post-create-body {
+                    .custom-textarea {
+                        &.custom-textarea--emoji-picker {
+                            padding-right: inherit;
+                            padding-left: 135px !important;
+                        }
+                    }
+                }
+            }
+
+            .post-create-footer {
+                padding: 0 16px;
+            }
+            
+            #header-popover {
+                .close {
+                    right: 50%;
+                    left: inherit;
+                    margin-right: -15px;
+                    margin-left: inherit;
+                }
+            }
+
+            .video-div {
+                &.embed-responsive-item {
+                    iframe {
+                        right: 0;
+                        left: inherit;
+                    }
+                }
+            }
+
+            .compliance-panel,
+            .audit-panel {
+                .row {
+                    >.form-group {
+                        padding-right: 15px;
+                        padding-left: inherit;
+                    }
+                }
+            }
+
+            .post {
+                &:not(.post--compact) {
+                    .Badge {
+                        right: 6px;
+                        left: inherit;
+                    }
+                }
+
+                .post__remove {
+                    margin-right: inherit;
+                    margin-left: 10px;
+                }
+
+                &.post--compact {
+                    padding-right: 1em;
+                    padding-left: inherit;
+
+                    &.same--root {
+                        &.same--user {
+                            padding-right: 1em;
+                            padding-left: inherit;
+                        }
+                    }
+                }
+
+                &.same--root {
+                    &.same--user {
+                        .flag-icon__container {
+                            right: auto;
+                            left: inherit;
+                        }
+                    }
+                }
+
+                .post__content {
+                    padding: 0 0 0 10px;
+                }
+
+                .post__header {
+                    padding-right: inherit;
+                    padding-left: 70px;
+                }
+
+                .post__reply {
+                    float: left;
+                    margin-right: inherit;
+                    margin-left: 20px;
+                }
+
+                &.post--comment {
+                    .post__body {
+                        padding: 0 7px 0 0;
+                    }
+                }
+
+                .star-icon__container {
+                    right: auto;
+                    left: inherit;
+                }
+
+                &.same--root {
+                    .star-icon__container {
+                        right: auto;
+                        left: inherit;
+                    }
+                }
+            }
+
+            .tip-div {
+                right: 15px;
+                left: auto;
+            }
+
+            .tip-overlay {
+                &.tip-overlay--chat {
+                    margin-right: 10px;
+                    margin-left: inherit;
+
+                    .arrow {
+                        right: 32px;
+                        left: inherit;
+                    }
+                }
+            }
+
+            .file-details__container {
+                .file-details__preview {
+                    border-right: inherit;
+                    border-left: none;
+                }
+            }
+
+            .search-help-popover {
+                right: 0;
+                left: inherit;
+            }
+
+            .file-overlay {
+                &.center-file-overlay {
+                    .overlay__indent {
+                        margin-right: 0;
+                        margin-left: inherit;
+                    }
+                }
+
+                .overlay__circle {
+                    margin: -150px -150px 0 0;
+                }
+
+                .overlay__files {
+                    margin: 60px 0 15px auto;
+                }
+            }
+
+            .signup-team__container {
+                padding: 60px 0 0 10px;
+
+                .btn.btn-full {
+                    padding-right: 10px;
+                    padding-left: inherit;
+                }
+
+                .btn {
+
+                    .icon,
+                    .fa {
+                        margin-right: 6px;
+                        margin-left: inherit;
+                    }
+                }
+            }
+
+            .app__body {
+                .row--invite {
+                    .col-sm-6 {
+                        &:first-child {
+                            padding-right: inherit;
+                            padding-left: 15px;
+                        }
+                    }
+                }
+
+                .modal {
+                    .info__label {
+                        text-align: right;
+                    }
+
+                    .modal-header {
+                        .btn {
+                            &.btn-primary {
+                                margin: 10px 0 6px 0;
+                            }
+                        }
+                    }
+
+                    .settings-modal {
+                        &.display--content {
+                            .settings-table {
+                                .settings-content {
+                                    .section-min__title {
+                                        padding-right: inherit;
+                                        padding-left: 15px;
+                                    }
+
+                                    .section-min__edit {
+                                        right: inherit;
+                                        left: 0;
+                                        text-align: right;
+                                    }
+
+                                    .appearance-section {
+                                        .theme-elements {
+                                            .element {
+                                                margin-right: inherit;
+                                                margin-left: 10px;
+
+                                                &:nth-child(2n) {
+                                                    margin-right: inherit;
+                                                    margin-left: 10px;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .no-padding--left {
+                                        padding-right: 15px;
+                                        padding-left: inherit;
+                                    }
+                                }
+                            }
+                        }
+
+                        .settings-table {
+                            .settings-content {
+                                .section-min__edit {
+                                    text-align: right;
+
+                                    button {
+                                        text-align: right;
+                                    }
+                                }
+
+                                &.minimize-settings {
+                                    .user-settings {
+                                        padding: 70px 0 30px 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .file-preview__container {
+                margin: 10px 0 5px 0;
+            }
+
+            // Since system console is not responsive we're overriding bootstrap styles for it
+            .admin-sidebar {
+                .navbar-nav {
+                    >li {
+                        float: right;
+                    }
+
+                    .dropdown-menu {
+                        right: auto;
+                        left: 0;
+                    }
+                }
+            }
+
+            #navbar {
+                .navbar-default {
+                    .dropdown-menu {
+                        right: 0;
+                        left: inherit;
+                        padding: 2.5em 0 0 0;
+                        
+                        .close {
+                            margin-right: -15px;
+                            margin-left: inherit;
+                            right: unset;
+                            left: 20px;
+                        }
+                    }
+
+                    .status {
+                        margin: 0 0px 0 8px;
+                    }
+                }
+            }
+
+            .footer-pane {
+                .footer-link {
+                    text-align: left;
+                }
+            }
+
+            .search-bar__container {
+                .search-form__container {
+                    padding: 0 0 0 20px;
+                }
+
+                .search__form {
+                    padding-right: 40px;
+                    padding-left: inherit;
+                    
+                    .search__icon {
+                        right: 15px;
+                        left: inherit;
+                    }
+
+                    .icon--refresh {
+                        right: inherit;
+                        left: 16px;
+                    }
+                }
+            }
+
+            .sidebar--menu {
+                @include translate3d(-290px, 0, 0);
+
+                &.move--left {
+                    @include translate3d(0, 0, 0);
+                }
+            }
+
+            .sidebar--left {
+                @include translate3d(290px, 0, 0);
+
+                &.move--right {
+                    @include translate3d(0, 0, 0);
+                }
+
+                .nav {
+                    li {
+                        .nav-more {
+                            padding: 12px 17px 12px 0;
+                        }
+
+                        .sidebar-item {
+                            &.has-close {
+                                .btn-close {
+                                    margin-right: inherit;
+                                    margin-left: 4px;
+                                }
+                            }
+                        }
+
+                        h4 {
+                            margin: 1.5 0 1em 0;
+                        }
+                    }
+                }
+            }
+
+            .sidebar--right {
+                @include translate3d(-100%, 0, 0);
+                right: inherit;
+                left: 0;
+                
+                .post-create__container {
+                    .emoji-rhs {
+                        right: inherit;
+                        left: -1px;
+                    }
+
+                    .post-create-footer {
+                        padding-right: inherit;
+                        padding-left: 0;
+                    }
+                }
+
+                .sidebar__search-clear {
+                    margin-right: inherit;
+                    margin-left: 0;
+                }
+            }
+
+            .inner-wrap {
+                
+                .app__body & {
+                    &:before {
+                        right: -15px;
+                        left: inherit;
+                    }
+                }
+
+                &.move--right {
+                    @include translate3d(0, 0, 0);
+                }
+        
+                &.move--left-small {
+                    @include translate3d(290px, 0, 0);
+                }
+        
+                &.move--left {
+                    @include translate3d(-100%, 0, 0);
+                }
+            }
+
+            .integration-option {
+                margin-right: 0;
+                margin-left: inherit;
+            }
+
+            .post-comments {
+                padding: 9px 10px 10px 21px !important;
+            }
+
+            .multi-teams {
+
+                .app__content {
+                    margin-right: 0;
+                    margin-left: inherit;
+                }
+
+                .sidebar--left {
+                    right: 0;
+                    left: inherit;
+
+                    &.move--right {
+                        right: 65px;
+                        left: inherit;
+                    }
+                }
+            }
+
+            .post {
+                .attachment {
+                    .attachment-actions {
+                        .alert {
+                            right: 0;
+                            left: inherit;
+                            margin: 1rem 0 0.4rem 0;
+                        }
+                    }
+
+                    .attachment__body__wrap {
+                        .btn-close {
+                            right: -15px;
+                            left: inherit;
+                        }
+                    }
+                }
+            }
+
+            .modal-body {
+                .MenuWrapper {
+                    .Menu {
+                        &.dropdown-menu {
+                            right: inherit;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 640px) {
+            .app__body {
+                .modal {
+                    .about-modal {
+                        .about-modal__logo+div {
+                            padding: 2em 0 0 0;
+                        }
+                    }
+                }
+            }
+
+            .access-history__table {
+                .access__report {
+                    margin: 0 15px 15px 0;
+                }
+            }
+
+            .activity-log__table {
+                .activity-log__action {
+                    text-align: right;
+                }
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            .member-select__container {
+                right: 15px;
+                left: inherit;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            #user-profile-popover {
+                right: 50px !important;
+                left: inherit !important;
+            }
+
+            .nav-tabs {
+                >li {
+                    margin-right: inherit;
+                    margin-left: 0;
+                }
+            }
+
+            .member-div {
+                .member-drop,
+                .member-role {
+                    margin: 0 44px 0 0;
+                    right: inherit;
+                    left: 0;
+                }
+
+                .open>.dropdown-menu {
+                    right: 0;
+                    left: auto;
+                }
+            }
+
+            .sidebar--left {
+                @include translate3d(260px, 0, 0);
+            }
+
+            // overides edit modal body element's css position
+            // to allow emoji picker to fill the screen on mobile screens < 480
+            .edit-modal-body--add-reaction {
+                .emoji-picker {
+                    right: -1px !important;
+                    left: inherit !important;
+                }
+            }
+        }
+
+        @media screen and (max-width: 350px) {
+            .post-attachment-dropdown {
+                &:after {
+                    right: auto;
+                    left: 12px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            .tutorial-steps__container {
+                right: 0;
+                left: inherit;
+                
+                .tutorial__content {
+                    .tutorial__steps {
+                        h1 {
+                            margin: -5px 0 20px 0;
+                        }
+
+                        .tutorial__circles {
+                            margin: 15px 0 20px 0;
+                        }
+                    }
+                }
+            }
+        }
+        //// mobile END
+
+        //// tablet START
+        @media screen and (max-width: 1020px) {
+            .inner-wrap {
+                &:not(.move--left) {
+                    margin-right: inherit !important;
+                    margin-left: 0 !important;
+                }
+
+                &.move--left {
+                    margin-right: inherit !important;
+                    margin-left: 0 !important;
+
+                    .channel-header__links {
+                        right: inherit;
+                        left: auto;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 960px) {
+            .system-users__filter-row {
+                > label {
+                    span {
+                        padding-right: 0;
+                        padding-left: inherit;
+                    }
+                }
+            }
+
+            .app__body {
+                .modal {
+                    .modal-image {
+                        .modal-button-bar {
+                            padding: 5px 5px 5px 10px;
+                        }
+                    }
+                }
+            }
+
+            .post-create__container {
+                .channel-archived__close-btn {
+                    margin: 10px 0 0 auto;
+                }
+            }
+
+            .backstage-sidebar {
+                padding: 30px 0 0 15px;
+            }
+        }
+
+        @media (min-width: 880px) {
+            .post-collapse__show-more {
+                padding-right: inherit;
+                padding-left: 60px;
+            }
+
+            .post-attachment-collapse__show-more {
+                padding-right: inherit;
+                padding-left: 0;
+            }
+
+            .sidebar--right {
+                .post-collapse__show-more, .post-attachment-collapse__show-more {
+                    padding-right: inherit;
+                    padding-left: 0;
+                }
+            }
+        }
+
+        // Tablet and desktop
+        @media screen and (min-width: 768px) {
+            .channel-header__popover {
+                right: 236px !important;
+                left: inherit !important;
+            }
+
+            .col-sm-auto {
+                float: right;
+            }
+
+            .sidebar--right {
+                &.move--left {
+                    @include translateX(0);
+                }
+
+                &.sidebar--right--expanded {
+                    .search-bar__container {
+                        padding-right: 10px;
+                        padding-left: inherit;
+                    }
+                }
+            }
+
+            .inner-wrap {
+                &.move--left {
+                    .app__content {
+                        > #post-list {
+                            margin-right: 0;
+                            margin-left: 400px;
+                        }
+                    }
+                }
+            }
+
+            .post {
+                .sidebar--right & {
+                    &.same--root {
+                        &.post--comment {
+                            &:not(.post--compact) {
+                                .post__pinned-badge {
+                                    margin-right: 7px;
+                                    margin-left: inherit;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.post--compact {
+                    .channel__wrap & {
+                        .post__permalink {
+                            right: -76px;
+                            left: inherit;
+                            text-align: left;
+                        }
+
+                        .star-icon__container {
+                            right: -65px;
+                            left: inherit;
+                            text-align: left;
+                        }
+                    }
+
+                    .post__pinned-badge {
+                        margin-right: 0;
+                        margin-left: 5px;
+                    }
+
+                    &:not(.post--thread) {
+                        padding: 0 77px 0 .5em; // .post-row__padding.bottom needs to be changed accordingly if this is changed
+
+                        .post__link {
+                            margin: 3px 0 7px 0;
+                        }
+
+                        .post__header {
+                            float: right;
+                            padding-right: inherit;
+                            padding-left: 0;
+                            
+                            .col__name {
+                                margin-right: inherit;
+                                margin-left: 2px;
+                                padding-right: inherit;
+                                padding-left: 5px;
+                            }
+                        }
+                        
+                        .post__content {
+                            padding-right: inherit;
+                            padding-left: 45px;
+                        }
+                    }
+
+                    .flag-icon__container, .card-icon-container {
+                        right: -16px;
+                        left: inherit;
+                    }
+
+                    .sidebar--right & .flag-icon__container, .sidebar--right & .card-icon__container {
+                        right: auto;
+                        left: inherit;
+                    }
+
+                    &.same--root {
+                        &.same--user {
+                            padding-right: 77px;
+                            padding-left: inherit;
+
+                            .flag-icon__container, .card-icon__container {
+                                right: -16px;
+                                left: inherit;
+                            }
+                        }
+
+                        &.post--comment {
+                            .post__header {
+                                margin-right: 12px;
+                                margin-left: inherit;
+                            }
+                        }
+                    }
+                }
+
+                &.same--root {
+                    &.same--user {
+                        .post__header {
+                            float: right;
+
+                            .post__pinned-badge {
+                                margin-right: inherit;
+                                margin-left: 5px;
+                            }
+                        }
+
+                        &:not(.post--compact) {
+                            .post__permalink {
+                                right: -18px;
+                                left: inherit;
+
+                                .sidebar--right & {
+                                    right: -18px;
+                                    left: inherit;
+                                }
+                            }
+
+                            .post__time {
+                                text-align: left;
+                            }
+                        }
+                    }
+
+                    &.post--comment:not(.post--compact) {
+                        .post__pinned-badge {
+                            margin-right: 10px;
+                            margin-left: inherit;
+                        }
+                    }
+                }
+            }
+        }
+        //// tablet END
+    /*### responsive END ###*/
+
+    /*### routes START ###*/
+        //// about-modal START
+        .modal {
+            .about-modal {
+                .modal-content {
+                    .modal-header {
+                        .close {
+                            right: inherit;
+                            left: 15px;
+                        }
+
+                        .more-modal__image {
+                            margin-right: inherit;
+                            margin-left: 12px;
+                        }
+
+                        .icon {
+                            margin: 0 8px 0 5px;
+                        }
+                    }
+                }
+
+                .select-suggestion-container {
+                    &:after {
+                        right: inherit;
+                        left: 12px;
+                    }
+                }
+
+                .about-modal__hash {
+                    text-align: left;
+
+                    p {
+                        &:first-child {
+                            float: right;
+                            text-align: right;
+                        }
+                    }
+                }
+
+                .about-modal__notice {
+                    text-align: left;
+
+                    p {
+                        &:first-child {
+                            text-align: right;
+                        }
+                    }
+                }
+
+                .about-modal__logo {
+                    padding: 0 20px 0 40px;
+                }
+            }
+        }
+        //// about-modal END
+
+        //// activity-log START
+        .animation--highlight {
+            &:before {
+                right: 0;
+                left: inherit;
+            }
+        }
+
+        .activity-log__table {
+            .activity-log__action {
+                text-align: left;
+            }
+
+            .report__platform {
+                .fa {
+                    margin-right: inherit;
+                    margin-left: 6px;
+                }
+            }
+        }
+        //// activity-log END
+        
+        //// admin-console START
+        .admin-console {
+            padding-right: 220px;
+            padding-left: inherit;
+
+            .color-picker__popover {
+                right: inherit;
+                left: 0;
+            }
+
+            .btn {
+                &.btn-spacing--right {
+                    margin-right: inherit;
+                    margin-left: 10px;
+                }
+
+                .fa {
+                    margin-right: inherit;
+                    margin-left: 7px;
+
+                    &.margin-left {
+                        margin-right: 7px;
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            &.admin {
+                padding: 0 inherit 20px 40px;
+            }
+
+            .form-horizontal {
+                .control-label {
+                    padding-right: inherit;
+                    padding-left: 0;
+                    text-align: right;
+                }
+
+                .file__upload {
+                    margin: 0 0 10px 10px;
+                    
+                    input {
+                        right: 0;
+                        left: inherit;
+                        padding-right: 100%;
+                        padding-left: inherit;
+                    }
+                }
+
+                .alert {
+                    margin: 1em 0 0 0;
+                    
+                    .fa {
+                        margin-right: inherit;
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+            .banner {
+                margin: 4px 0 2em 0;
+
+                p {
+                    &:last-child {
+                        margin: 0 0 2px 0;
+                    }
+                }
+            }
+
+            .panel-default {
+                .panel-body {
+                    padding: 30px 0 10px 0;
+                }
+            }
+
+            .panel-title {
+                a {
+                    .fa {
+                        float: left;
+                    }
+                }
+            }
+
+            .admin-console__header {
+                &.with-back {
+                    .back {
+                        border-right: inherit;
+                        border-left: 1px solid alpha-color($black, .1);
+                        margin-right: inherit;
+                        margin-left: 20px;
+                    }
+                }
+            }
+
+            .admin-console-save {
+                .cancel-button {
+                    margin: 0 0 0 10px;
+                }
+                
+                .reset-defaults-btn {
+                    right: inherit;
+                    left: 0;
+                }
+            }
+        }
+
+        .job-table__table {
+            margin: 20px 0 10px 0;
+        }
+
+        .admin-console__disabled-text {
+            margin: 10px 15px 0 0;
+        }
+
+        .admin-sidebar {
+            right: 0;
+            left: inherit;
+            
+            .nav-pills__container {
+                .filter-container{
+                    .search__icon {
+                        right: 21px;
+                        left: inherit;
+                    }
+                    
+                    .sidebar__search-clear {
+                        right: inherit;
+                        left: 12px;
+                    }
+                }
+            }
+
+            .sidebar-category {
+                .category-title {
+                    .category-icon {
+                        margin-right: inherit;
+                        margin-left: 6px;
+                    }
+                }
+            }
+
+            .sidebar-section-title {
+                padding: 6px 15px 6px 35px;
+            }
+
+            .sidebar-subsection-title {
+                padding: 6px 30px 6px 35px;
+            }
+
+            .sidebar-section-title,
+            .sidebar-subsection-title {
+                &--active {
+                    &:after {
+                        right: inherit;
+                        left: -1px;
+                    }
+                }
+            }
+
+            .menu-icon--right {
+                right: inherit;
+                left: 12px;
+                
+                .fa {
+                    right: inherit;
+                    left: -2px;
+                }
+
+                &.menu__close {
+                    right: inherit;
+                    left: 10px;
+                }
+            }
+        }
+
+        .system-users__filter-row {
+            > label {
+                span {
+                    padding: 0 8px 0 4px;
+                }
+            }
+        }
+
+        .manage-teams {
+            .modal-body {
+                padding: 15px inherit 0 15px;
+            }
+
+            .manage-teams__teams {
+                margin: 1em 0 .3em 0;
+            }
+
+            .member-row--padded {
+                padding-right: 20px;
+                padding-left: inherit;
+
+                strong {
+                    margin-right: inherit;
+                    margin-left: 10px;
+                }
+            }
+
+            .manage-row--inner {
+                padding: 15px 0 4px 0;
+            }
+
+            .manage-teams__info {
+                margin-right: 10px;
+                margin-left: inherit;
+            }
+
+            .manage-teams__system-admin {
+                margin-right: 10px;
+                margin-left: inherit;
+                padding-right: inherit;
+                padding-left: 10px;
+            }
+
+            .manage-teams__team-actions {
+                margin-right: 10px;
+                margin-left: inherit;
+            }
+        }
+
+        .admin-setting-user__dropdown {
+            &:before {
+                border-width: 5px inherit 2.5px 5px;
+                right: inherit;
+                left: 11px;
+            }
+        }
+
+        .password__group-addon {
+            text-align: right;
+        }
+        //// admin-console END
+
+        //// backstage START
+        .backstage-navbar__back {
+            .fa {
+                margin-right: inherit;
+                margin-left: 7px;
+            }
+        }
+        
+        .backstage-content {
+            padding-right: 135px;
+            padding-left: inherit;
+        }
+        
+        .backstage-sidebar__category {
+            .category-title__text {
+                right: 2.5em;
+                left: inherit;
+            }
+        
+            .section-title,
+            .subsection-title {
+                padding-right: 2em;
+                padding-left: inherit;
+            }
+        
+            .subsection-title {
+                padding-right: 3em;
+                padding-left: inherit;
+            }
+        }
+        
+        .backstage-filter__search {
+            .fa {
+                right: 11px;
+                left: inherit;
+            }
+        
+            input {
+                padding-right: 30px;
+                padding-left: inherit;
+            }
+        }
+        
+        .backstage-list__item {
+            .item-details__trigger {
+                margin-right: 6px;
+                margin-left: inherit;
+            }
+        }
+        
+        // Backstage Form
+        
+        .backstage-form {
+            padding: 40px inherit 30px 30px;
+            
+            &.backstage-form__confirmation {
+                padding: 30px inherit 20px 30px;
+            }
+        
+            .backstage-form__title {
+                margin: 5px 0 1.5em 0;
+            }
+        
+            .radio,
+            .checkbox {
+                input {
+                    margin: 0 0 0 5px;
+                }
+            }
+        }
+        
+        .backstage-form__footer {
+            text-align: left;
+        
+            .has-error {
+                float: right;
+                
+                .control-label {
+                    text-align: right;
+                }
+            }
+        }
+        
+        .integration__icon {
+            right: inherit;
+            left: 20px;
+        }
+
+        .integration-option {
+            margin: 0 0 30px 30px;
+        }
+        
+        .integration-option__image {
+            margin: .5em 0 .7em 0;
+        }
+        
+        .emoji-list__name {
+            padding: 20px 15px 20px 0;
+        }
+        
+        .emoji-list__actions {
+            padding: 20px 0 20px 15px;
+        }
+        
+        .add-emoji__upload {
+            margin: 0 0 10px 10px;
+            
+            input {
+                right: 0;
+                left: inherit;
+            }
+        }
+        
+        .bot-disabled {
+            text-align: right;
+        }
+        
+        .bot-list-img-container {
+            float: right;
+            margin-right: inherit;
+            margin-left: 15px;
+        }
+        
+        .bot-profile__remove {
+            right: 110px;
+            left: inherit;
+        }    
+        //// backstage END
+
+        //// compliance START
+        .compliance-panel,
+        .audit-panel {
+            .row {
+                > .form-group {
+                    padding-right: 0;
+                    padding-left: inherit;
+
+                    &:first-child {
+                        padding-right: 15px;
+                        padding-left: inherit;
+                    }
+                }
+            }
+
+            .fa-refresh {
+                margin-right: inherit;
+                margin-left: 5px;
+            }
+        }
+        //// compliance END
+
+        //// docs START
+        .docs__page {
+            h1.markdown__heading {
+                margin: 1em 0 1em 0;
+            }
+        }
+        //// docs END
+
+        //// error-page START
+        body {
+            &.error {
+                .error__container {
+                    text-align: right;
+                }
+        
+                h2 {
+                    margin: .8em 0 .5em 0;
+                }
+            }
+        }
+        //// error-page END
+
+        //// get-app START
+        .get-app {
+            right: 0;
+            left: inherit;
+            padding: 20px inherit 30px 30px;
+            
+            .btn-primary {
+                margin: 2rem 0 3rem 0;
+            }
+        }
+        
+        .get-android-app {
+            .get-app__header {
+                text-align: right;
+            }
+        
+            .get-android-app__app-info {
+                margin-right: 8px;
+                margin-left: inherit;
+            }
+        }
+        //// get-app END
+        
+        //// print START
+        @media print {
+            #app-content {
+                margin-right: 0;
+                margin-left: inherit;
+            }
+
+            #channel_view .inner-wrap.move--left {
+                margin-right: inherit;
+                margin-left: 0;
+            }
+        }
+        //// print END
+
+        //// settings START
+        .modal {
+            .settings-modal {
+                .modal-back {
+                    right: 0;
+                    left: inherit;
+                    
+                    .fa {
+                        right: 0;
+                        left: inherit;
+                    }
+                }
+
+                label {
+                    &.text-left {
+                        text-align: right;
+                    }
+                }
+
+                .no-padding--left {
+                    padding-right: 0;
+                    padding-left: inherit;
+                }
+
+                .profile-img__remove {
+                    right: inherit;
+                    left: 8px;
+                }
+
+                .team-img__remove {
+                    right: inherit;
+                    left: -8px;
+                }
+
+                .settings-table {
+                    .security-links {
+                        margin-right: inherit;
+                        margin-left: 20px;
+
+                        .fa {
+                            margin-right: inherit;
+                            margin-left: 6px;
+                        }
+                    }
+
+                    .settings-content {
+                        padding: 0 inherit 30px 20px;
+                        
+                        .section-max {
+                            padding: 1em 0 1.3em 0;
+                        }
+
+                        .appearance-section {
+                            .group--code {
+                                select {
+                                    padding-right: inherit;
+                                    padding-left: 25px;
+                                }
+
+                                &:before {
+                                    right: inherit;
+                                    left: 50px;
+                                }
+                            }
+
+                            .theme-elements {
+                                padding-right: 15px;
+                                padding-left: inherit;
+
+                                .element {
+                                    margin-right: inherit;
+                                    margin-left: 10px;
+
+                                    &:nth-child(2n) {
+                                        margin-right: inherit;
+                                        margin-left: 0;
+                                    }
+                                }
+                            }
+
+                            .theme-elements__header {
+                                margin: 10px 0 0 20px;
+                                padding: 1px 0 10px 0;
+
+                                .header__icon {
+                                    float: left;
+                                }
+                            }
+
+                            .theme-elements__body {
+                                margin: 0 0 0 20px;
+                                padding: 20px 20px 0 0;
+                            }
+                        }
+
+                        .setting-box__inline-error {
+                            margin-right: 5px;
+                            margin-left: inherit;
+                        }
+                    }
+                }
+            }
+
+            .nav-pills {
+                > li {
+                    button {
+                        text-align: right;
+                    }
+
+                    .icon {
+                        margin-right: inherit;
+                        margin-left: 10px;
+                    }
+
+                    &.active {
+                        div {
+                            &:before {
+                                right: 0;
+                                left: inherit;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .sel-btn {
+            margin-right: inherit;
+            margin-left: 5px;
+        }
+
+        .member-div {
+            .post-profile-img {
+                margin-right: inherit;
+                margin-left: 8px;
+            }
+        }
+
+        .member-role,
+        .member-drop {
+            .fa {
+                margin: 0 4px 0 0;
+            }
+
+            .member-menu {
+                right: inherit;
+                left: 0;
+            }
+        }
+
+        .member-invite {
+            right: inherit;
+            left: 10px;
+        }
+
+        .member-menu {
+            right: auto;
+            left: 0;
+        }
+
+        .section-min__title {
+            padding-right: inherit;
+            padding-left: 50px;
+        }
+
+        .section-min__edit {
+            text-align: left;
+
+            .fa {
+                margin-right: inherit;
+                margin-left: 5px;
+            }
+        }
+        //// settings END
+
+        //// shortcuts-modal START
+        .app__body {
+            .modal {
+                .shortcuts-modal {
+                    .shortcuts-content {
+                        .modal-header {
+                            padding: 20px inherit 20px 40px;
+
+                            .close {
+                                right: inherit;
+                                left: 35px;
+                            }
+
+                            .modal-title {
+                                .shortcut-line {
+                                    span {
+                                        &:first-child {
+                                            margin-right: inherit;
+                                            margin-left: 5px;
+                                        }
+                                    }
+
+                                    .shortcut-key {
+                                        margin: 5px 5px 5px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .modal-body {
+                        padding: 0 inherit 20px 40px;
+                    }
+
+                    .section {
+                        .shortcut-line {
+                            span {
+                                &:first-child {
+                                    margin-right: inherit;
+                                    margin-left: 5px;
+                                }
+                            }
+
+                            .shortcut-key {
+                                margin: 5px 5px 5px 0;
+                            }
+                        }
+                    }
+
+                    .subsection {
+                        border-right: 2px solid;
+                        border-left: inherit;
+                        padding-right: 15px;
+                        padding-left: inherit;
+                    }
+
+                    .info__label {
+                        margin: 35px 0 10px 0;
+                    }
+                }
+            }
+        }
+        //// shortcuts-modal END
+
+        //// signup START
+        .signup-header {
+            padding: 0 inherit .2em 1em;
+            right: 0;
+            left: inherit;
+            
+            .fa {
+                margin-right: inherit;
+                margin-left: 4px;
+                transform: rotate(180deg);
+                vertical-align: middle;
+            }
+        }
+
+        .signup-team__container {
+            padding: 100px 0 50px 0;
+            
+            &.branded {
+                .signup__markdown {
+                    padding-right: inherit;
+                    padding-left: 80px;
+                }
+            }
+
+            h3 {
+                margin: 0 0 1.3em 0;
+            }
+
+            .input-group {
+                &.input-group--limit {
+                    .form-control {
+                        text-align: right;
+                    }
+
+                    .input-group-addon {
+                        text-align: right;
+                    }
+                }
+            }
+
+            .inner__content {
+                margin: 30px 0 20px 0;
+            }
+
+            .signup-team-logo {
+                margin: 0 0 2em 0;
+            }
+
+            .signup-team__name {
+                margin: .5em 0 0 0;
+            }
+
+            .signup-team__subdomain {
+                margin: .2em 0 1.2em 0;
+            }
+
+            .or__container {
+                margin: 2.5em -1rem 2.5em 0;
+                text-align: right;
+            }
+
+            ul {
+                padding-right: 18px;
+                padding-left: inherit;
+            }
+
+            .btn {
+                margin-right: inherit;
+                margin-left: 5px;
+
+                .fa {
+                    &:last-child {
+                        margin-right: 8px;
+                        margin-left: inherit;
+                    }
+
+                    &:first-child {
+                        margin-right: inherit;
+                        margin-left: 8px;
+                    }
+                }
+
+                .icon {
+                    margin-right: inherit;
+                    margin-left: 12px;
+                }
+
+                &.btn-custom-login {
+                    text-align: right;
+                    
+                    &.btn--full {
+                        text-align: right;
+                    }
+                }
+
+                .fa {
+                    &.fa-check,
+                    &.fa-refresh {
+                        right: -2px;
+                        left: inherit;
+                        margin-right: inherit;
+                        margin-left: .5em;
+                    }
+                }
+            }
+
+            .has-error {
+                .control-label {
+                    margin: 1em 0 0 0;
+                    
+                    &:before {
+                        margin-right: inherit;
+                        margin-left: 4px;
+                    }
+                }
+            }
+        }
+
+        .signup-team-all {
+            margin: 0 0 20px 0;
+            
+            .signup-team-dir {
+                .tooltip {
+                    margin: 10px 14px 0 0;
+                }
+
+                .icon {
+                    float: right;
+                    margin: 0 15px 0 -8px;
+                }
+
+                a {
+                    padding: 0 16px 0 20px;
+                }
+            }
+
+            .signup-team-dir__name {
+                float: right;
+            }
+
+            .signup-team__icon {
+                &.fa-spin {
+                    right: inherit;
+                    left: -2px;
+                }
+
+                &.fa-info-circle {
+                    float: right;
+                    margin-right: inherit;
+                    margin-left: .3em;
+                    padding-right: .5em;
+                    padding-left: inherit;
+                }
+            }
+        }
+
+        .authorize-btn {
+            margin-right: inherit;
+            margin-left: 6px;
+        }
+
+        .verify_panel {
+            margin: 60px inherit auto auto;
+        }
+        //// signup END
+
+        //// statistics START
+        .team_statistics {
+            .total-count {
+                .title {
+                    text-align: right;
+
+                    .fa {
+                        float: left;
+                    }
+                }
+
+                .content {
+                    padding: .3em 0 .35em 0;
+                }
+            }
+
+            .total-count--day {
+                padding: 5px inherit 10px 10px;
+            }
+
+            .recent-active-users {
+                tr {
+                    td {
+                        border-right: 1px solid $light-gray;
+                        border-left: inherit;
+                        padding: 5px inherit 6px 5px;
+                        
+                        &:first-child {
+                            border-right: none;
+                            border-left: inherit;
+                        }
+                    }
+                }
+            }
+        }
+        //// statistics END
+    /*### routes END ###*/
+
+    /*### utils START ###*/
+        //// modifiers START
+        .padding-bottom {
+            .control-label {
+                &.text-left {
+                    text-align: right;
+                }
+            }
+        }
+
+        .padding-left {
+            padding-left: inherit;
+            padding-right: 7px;
+
+            &.x2 {
+                padding-left: inherit;
+                padding-right: 12px;
+            }
+
+            &.x3 {
+                padding-left: inherit;
+                padding-right: 21px;
+            }
+        }
+
+        .padding-right {
+            padding-right: inherit;
+            padding-left: 7px;
+
+            &.x2 {
+                padding-right: inherit;
+                padding-left: 12px;
+            }
+
+            &.x3 {
+                padding-right: inherit;
+                padding-left: 21px;
+            }
+        }
+
+        .margin-right {
+            margin-right: inherit;
+            margin-left: 7px;
+
+            &.margin-right--half {
+                margin-right: inherit;
+                margin-left: 3px;
+            }
+
+            &.x2 {
+                margin-right: inherit;
+                margin-left: 12px;
+            }
+
+            &.x3 {
+                margin-right: inherit;
+                margin-left: 21px;
+            }
+        }
+
+        .margin-left {
+            margin-left: inherit;
+            margin-right: 7px;
+
+            &.x2 {
+                margin-left: inherit;
+                margin-right: 12px;
+            }
+
+            &.x3 {
+                margin-left: inherit;
+                margin-right: 21px;
+            }
+        }
+        //// modifiers END
+    /*### utils END ###*/
+
+    /*### widgets START ###*/
+        //// loading START
+            //// loading-bars START
+            .LoadingBars {
+                &.with-text {
+                    .spinner {
+                        margin-right: inherit;
+                        margin-left: 5px;
+                    }
+                }
+            }        
+            //// loading-bars END
+
+            //// loading-spinner START
+            .LoadingSpinner {
+                &.with-text {
+                    .spinner {
+                        margin-right: inherit;
+                        margin-left: 5px;
+                    }
+                }
+            }        
+            //// loading-spinner END
+        //// loading END
+    /*### widgets END ###*/
+
+    /*### team_icon START ###*/
+        .TeamIcon {
+            margin-right: inherit;
+            margin-left: 20px;
+        }
+    /*### team_icon END ###*/
+
+    /*### team_row START ###*/
+        .TeamRow__row .TeamRow__description {
+            i {
+                margin-right: inherit;
+                margin-left: 5px;
+            }
+        }
+
+        .TeamRow__row .TeamRow__actions {
+            padding-right: inherit;
+            padding-left: 15px;
+        }
+    /*### team_row END ###*/
+
+    /*### popup-menu START ###*/
+    .post-create .a11y__popup,
+    .post__header--info .a11y__popup,
+    .post__header .a11y__popup {
+        right: inherit !important;
+        left: 0px !important;
+    }
+
+    .emoji-picker {
+        transform: translateX(72%);
+    }
+    /*### popup-menu END ###*/
+
+    /*### others START ###*/
+    .pull-right {
+        float: left !important;
+    }
+
+    .pull-left {
+        float: right !important;
+    }
+
+    .move--left {
+        .channel-header {
+            .flex-parent {
+                padding-left: 0 !important;
+            }
+        }
+    }
+
+    #teamNameNextButton {
+        span {
+            vertical-align: super;
+        }
+
+        i {
+            transform: rotate(180deg);
+        }
+    }
+    /*### others END ###*/
+}
