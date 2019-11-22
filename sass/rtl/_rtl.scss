@@ -40,7 +40,7 @@
     //// system-notice
     //// team-channel-settings
     //// toggle
-    //// tooltip
+    //// tooltip --> haven't right to left
     //// tutorial
     //// videos
 
@@ -1461,14 +1461,6 @@ body[dir='rtl'] {
         }
         //// toggle END
 
-        //// tooltip START
-        .tooltip {
-            .tooltip-inner {
-                padding: 5px inherit 6px 10px;
-            }
-        }
-        //// tooltip END
-
         //// tutorial START
         .tip-backdrop {
             right: 0;
@@ -1478,6 +1470,7 @@ body[dir='rtl'] {
         .tip-overlay {
             &.tip-overlay--sidebar {
                 margin: 50px 10px 0 0;
+                right: 284px !important;
                 
                 .tutorial__footer {
                     right: 0;
@@ -1486,11 +1479,9 @@ body[dir='rtl'] {
 
                 .arrow {
                     border-right-width: 0;
-                    border-left-width: inherit;
-                    border-right-color: inherit;
+                    border-left-width: 10px;
                     border-left-color: $white;
                     right: -10px;
-                    left: inherit;
                 }
             }
 
@@ -1531,6 +1522,7 @@ body[dir='rtl'] {
 
             .tutorial__circles {
                 margin: 1.5em -4px -1.7em 0;
+                text-align: left;
             }
         }
 
@@ -2805,12 +2797,6 @@ body[dir='rtl'] {
                 }
             }
 
-            .post-create__container {
-                .post-create {
-                    padding: .5em 0 0 15px;
-                }
-            }
-
             .sidebar--right__back {
                 margin-right: -14px;
                 margin-left: inherit;
@@ -4071,6 +4057,7 @@ body[dir='rtl'] {
             .sidebar-subsection-title {
                 &--active {
                     &:after {
+                        content: "\f0da";
                         right: inherit;
                         left: -1px;
                     }
@@ -4933,9 +4920,8 @@ body[dir='rtl'] {
     /*### team_row END ###*/
 
     /*### popup-menu START ###*/
-    .post-create .a11y__popup,
-    .post__header--info .a11y__popup,
-    .post__header .a11y__popup {
+    .post-create .dropdown-menu,
+    .post__header .dropdown-menu {
         right: inherit !important;
         left: 0px !important;
     }
@@ -4969,6 +4955,32 @@ body[dir='rtl'] {
 
         i {
             transform: rotate(180deg);
+        }
+    }
+
+    [id^='tooltip-'] {
+        width: fit-content;
+        right: 47px;
+
+        .tooltip-arrow {
+            right: 0;
+            left: inherit;
+            border-width: 5px 0 5px 5px;
+            border-left-color: #000;
+            border-right-color: transparent;
+        }
+    }
+
+    #main-menu__tooltip {
+        left: inherit !important;
+        right: 284px;
+
+        .tooltip-arrow {
+            right: 0;
+            left: inherit;
+            border-width: 5px 0 5px 5px;
+            border-left-color: #000;
+            border-right-color: transparent;
         }
     }
     /*### others END ###*/
