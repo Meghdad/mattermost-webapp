@@ -1664,7 +1664,7 @@ body[dir='rtl'] {
 
         //// headers START
         .channel-header {
-
+            
             .channel-header__favorites {
                 float: right;
                 margin: 0 0 0 5px;
@@ -1893,7 +1893,7 @@ body[dir='rtl'] {
             }
         }
 
-        #navbar {
+        #navbar_wrapper {
             input {
                 margin: 0 2px 0 5px;
             }
@@ -1963,8 +1963,9 @@ body[dir='rtl'] {
 
             .post {
                 &.post--root {
-                    padding-right: 1.5em;
+                    padding-right: 1.5em !important;
                     padding-left: inherit;
+                    padding-bottom: 1em !important;
                 }
 
                 .post__header {
@@ -2243,7 +2244,7 @@ body[dir='rtl'] {
         }
 
         .post {
-            padding: 8px 1.5em 0 .5em; // If this needs to be changed then .post-row__padding needs to be adjusted accordingly
+            padding: 8px 1.5em 0 .5em !important; // If this needs to be changed then .post-row__padding needs to be adjusted accordingly
             
             &.post--thread {
                 &.same--user {
@@ -3301,19 +3302,18 @@ body[dir='rtl'] {
                 }
             }
 
-            #navbar {
+            #navbar_wrapper {
                 .navbar-default {
-                    .dropdown-menu {
+                    .Menu {
                         right: 0;
                         left: inherit;
-                        padding: 2.5em 0 0 0;
-                        
-                        .close {
-                            margin-right: -15px;
-                            margin-left: inherit;
-                            right: unset;
-                            left: 20px;
-                        }
+                    }
+        
+                    .Menu__close {
+                        margin-right: -15px;
+                        margin-left: inherit;
+                        right: unset;
+                        left: 20px;
                     }
 
                     .status {
@@ -3427,7 +3427,7 @@ body[dir='rtl'] {
                 }
         
                 &.move--left {
-                    @include translate3d(-100%, 0, 0);
+                    @include translate3d(100%, 0, 0);
                 }
             }
 
@@ -3444,7 +3444,6 @@ body[dir='rtl'] {
 
                 .app__content {
                     margin-right: 0;
-                    margin-left: inherit;
                 }
 
                 .sidebar--left {
@@ -4897,6 +4896,63 @@ body[dir='rtl'] {
             //// loading-spinner END
         //// loading END
     /*### widgets END ###*/
+    
+    /*### menu_item START ###*/
+    .Menu {
+        .MenuItem {
+            .MenuItem__icon {
+                margin-right: inherit;
+                margin-left: 8px;
+            }
+
+            > div {
+                padding-right: 0px !important;
+                padding-left: inherit;
+            }
+
+            > div,
+            > button,
+            > a {
+                padding: 0 24px 0 32px;
+                text-align: right;
+            }
+
+            span.icon {
+                padding-right: inherit;
+                padding-left: 15px;
+            }
+        }
+    }
+
+    .SubMenu {
+        padding-right: 0px;
+        padding-left: inherit;
+        right: unset;
+        left: inherit;
+    }
+
+    .SubMenu__icon-left {
+        padding: 0 9px 0 8px;
+    }
+
+    .SubMenu__icon-left-empty {
+        padding: 0 9px 0 8px;
+        
+        &.mobile {
+            padding: 0 9px 0 4px;
+        }
+    }
+
+    .SubMenu__icon-right {
+        margin-right: auto;
+        margin-left: inherit;
+    }
+
+    .SubMenu__icon-right-empty {
+        margin-right: auto;
+        margin-left: inherit;
+    }
+    /*### menu_item END ###*/
 
     /*### team_icon START ###*/
         .TeamIcon {
@@ -4940,13 +4996,13 @@ body[dir='rtl'] {
         float: right !important;
     }
 
-    .move--left {
-        .channel-header {
-            .flex-parent {
-                padding-left: 0 !important;
-            }
-        }
-    }
+    // .move--left {
+    //     .channel-header {
+    //         .flex-parent {
+    //             padding-left: 0 !important;
+    //         }
+    //     }
+    // }
 
     #teamNameNextButton {
         span {
