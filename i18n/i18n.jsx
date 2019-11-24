@@ -38,6 +38,7 @@ import {addLocaleData} from 'react-intl';
 import deLocaleData from 'react-intl/locale-data/de';
 import enLocaleData from 'react-intl/locale-data/en';
 import esLocaleData from 'react-intl/locale-data/es';
+import faLocaleData from 'react-intl/locale-data/fa';
 import frLocaleData from 'react-intl/locale-data/fr';
 import itLocaleData from 'react-intl/locale-data/it';
 import jaLocaleData from 'react-intl/locale-data/ja';
@@ -189,6 +190,7 @@ export function doAddLocaleData() {
     addLocaleData(enLocaleData);
     addLocaleData(deLocaleData);
     addLocaleData(esLocaleData);
+    addLocaleData(faLocaleData);
     addLocaleData(frLocaleData);
     addLocaleData(itLocaleData);
     addLocaleData(jaLocaleData);
