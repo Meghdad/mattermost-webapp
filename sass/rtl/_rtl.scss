@@ -271,8 +271,6 @@ body[dir='rtl'] {
         }
 
         .emoji-picker__items {
-            padding: 0 0 8px 8px;
-
             .emoji-picker-items__container {
                 .emoji-picker__item {
                     margin: 0 0 1px 3px;
@@ -298,8 +296,6 @@ body[dir='rtl'] {
         }
 
         .emoji-picker__preview {
-            padding: 7px 0 0 10px;
-            
             .emoji-picker__preview-image-label-box {
                 margin-right: 4px;
                 margin-left: inherit;
@@ -2976,10 +2972,6 @@ body[dir='rtl'] {
                 }
             }
 
-            .emoji-picker__preview {
-                padding: 10px 0 0 10px;
-            }
-
             .mobile-main-menu {
                 .Menu {
                     &.dropdown-menu {
@@ -3003,6 +2995,10 @@ body[dir='rtl'] {
                             .SubMenu__icon {
                                 padding: 0 8px 0 5px !important;
                             }
+                        }
+                        >div,
+                        >button {
+                            padding: 15px 20px;
                         }
                     }
                 }
